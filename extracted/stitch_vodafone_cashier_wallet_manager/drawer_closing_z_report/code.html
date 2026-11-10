@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,600;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed-dim":"#ffb4a8","on-surface-variant":"#e7bdb6","tertiary-container":"#006e4b","surface-container":"#1e1f26","background":"#111319","on-tertiary-fixed-variant":"#005236","outline":"#ae8882","error":"#ffb4ab","secondary-fixed-dim":"#c3c6d1","on-secondary-fixed":"#181c24","on-error":"#690005","tertiary-fixed":"#6ffbbe","surface-container-highest":"#33343b","on-tertiary-container":"#67f4b7","on-primary-container":"#ffd1ca","on-tertiary":"#003824","surface-variant":"#33343b","surface-tint":"#ffb4a8","inverse-surface":"#e2e2eb","primary-fixed":"#ffdad4","on-primary-fixed":"#410000","on-secondary":"#2c3039","outline-variant":"#5d3f3b","on-secondary-fixed-variant":"#434750","surface-bright":"#373940","on-tertiary-fixed":"#002113","inverse-primary":"#c00000","primary":"#ffb4a8","surface-container-lowest":"#0c0e14","on-background":"#e2e2eb","on-primary":"#690000","secondary-fixed":"#dfe2ed","tertiary-fixed-dim":"#4edea3","on-surface":"#e2e2eb","surface-container-high":"#282a30","inverse-on-surface":"#2e3037","on-secondary-container":"#b5b8c3","on-primary-fixed-variant":"#930000","surface-container-low":"#191b22","on-error-container":"#ffdad6","tertiary":"#4edea3","primary-container":"#c40000","secondary":"#c3c6d1","error-container":"#93000a","secondary-container":"#454952","surface":"#111319","surface-dim":"#111319"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1rem","margin-mobile":"1rem","space-xs":"0.25rem","gutter-compact":"0.75rem","space-xl":"2rem","margin":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-lg":"1.5rem"},"fontFamily":{"body-lg":["Manrope"],"headline-md":["Hanken Grotesk"],"label-code":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-numeric":["Hanken Grotesk"],"display-lg":["Hanken Grotesk"],"display-lg-mobile":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"],"body-sm":["Manrope"],"body-md":["Manrope"]},"fontSize":{"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"500"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"label-code":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-numeric":["1.125rem",{"lineHeight":"1.25rem","letterSpacing":"0.02em","fontWeight":"700"}],"display-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"display-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div><span class="font-label-code text-label-code uppercase tracking-wider text-tertiary">18 Nodes Operational</span></div><span class="font-label-code text-label-code text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded-lg">v2.4 POS</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-headline-sm text-headline-sm">Dashboard</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">نظرة عامة</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="todays-sales" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-headline-sm text-headline-sm">Today's Sales</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">مبيعات اليوم</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="18-line-wallets-manager" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">sim_card_download</span><span class="font-headline-sm text-headline-sm">18 Wallets</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">إدارة الـ 18 خط</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="qr-and-barcode-scanner" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">qr_code_scanner</span><span class="font-headline-sm text-headline-sm">Scanner</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">المسح الضوئي</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="screenshots-and-proof-vault" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-headline-sm text-headline-sm">Proof Vault</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">الاسكرينات</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="drawer-reconciliation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">calculate</span><span class="font-headline-sm text-headline-sm">Drawer Closing</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">تقفيل الدرج</span></a></nav></div><div class="px-space-md flex flex-col gap-space-sm"><div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-code text-label-code text-secondary">CASH POOL LIMIT</span><span class="font-label-numeric text-label-numeric text-on-surface">74%</span></div><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-[74%]"></div></div><div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant"><span class="">18 Lines Float</span><span class="">EGP 360K</span></div></div><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="font-label-code text-label-code">POS-TRM-04</span></div><a class="text-on-surface-variant hover:text-on-surface" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-low/95 backdrop-blur-md z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Vodafone Cash Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQirkeHe2-RNVwQfG8p33WlAz_txKaPv7eeU05_v6IbvcV7G57yj_0lq2KchrK0TtCEUI65wL-EawbgUKlBQxtRNdiA3ODkkY4jRh7XdFBflQMC_nu6OCtp7WoWGkgc-UQknbzIb4fy6lyHOaGbxzOJYHP52XiRxK6K-Z57aaoxKZx4lUYdBZHWKZ-49wlxVFOR3ci6tWX5bzwyFl09MFTwk_9qotd0UPp2sQrZ5WT"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Vodafone Cash</span><span class="font-label-code text-label-code text-primary leading-tight">Agent Multi-Line POS</span></div></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-tertiary-container/30 px-space-sm py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-code text-label-code text-on-tertiary-container uppercase tracking-wide">Shift Open</span></div><div class="flex flex-col"><span class="font-label-code text-label-code text-secondary uppercase">Drawer Balance (رصيد الخزينة)</span><span class="font-label-numeric text-label-numeric text-on-surface">24,850.00 <span class="font-body-sm text-body-sm text-tertiary">EGP</span></span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container px-space-sm py-1.5 rounded-lg w-64 gap-space-xs"><span class="material-symbols-outlined text-[18px] text-outline">search</span><span class="font-body-sm text-body-sm text-outline">Search MSISDN / 010...</span></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex flex-col items-end"><span class="font-label-numeric text-label-numeric text-on-surface">14:32:08</span><span class="font-label-code text-label-code text-secondary">24 OCT 2024</span></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col items-end"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Ahmed Mansour</span><span class="font-label-code text-label-code text-on-surface-variant leading-tight">Shift #2 • Teller (كاشير)</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASb6exdMbbj11Na0GZ-QpseoHTFnIGcPG6rnEb9wdZT1SF4OaFHE81YGr68kskUceOx_ihtHYg79Ih04Wq0GquorEVx6HlwR-gBrIZ6-9UAssjpqAh9BTp0BmO4WFA8Sgr6KzS24EFHYGYEfanG_2-oautTva7R3_9MezJQMVpRv7auQOdbcbYQKmoGMLBtaOvDTyjItvi91AIH1TN7FJxP25NviavJBbR45Fl0hgY"/></div></div></header><main class="relative pt-16 w-full bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Script for Tabular Denomination Calculator and Active Sidebar Sync -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Highlight active sidebar item
+      const sidebarLinks = document.querySelectorAll('aside nav a');
+      sidebarLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'drawer-reconciliation') {
+          link.className = 'flex items-center justify-between px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container font-headline-sm transition-colors';
+        } else {
+          link.classList.remove('bg-primary-container', 'text-on-primary-container');
+        }
+      });
+
+      // Quick hotkey listener for F12 Print and ESC
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'F12') {
+          e.preventDefault();
+          triggerPrintReport();
+        } else if (e.key === 'Escape') {
+          console.log('ESC Pressed: Back to Dashboard');
+        }
+      });
+
+      // Denomination Calculator logic
+      const denomInputs = document.querySelectorAll('.denom-qty');
+      const expectedTotal = 26700.00;
+
+      function recalc() {
+        let physicalSum = 0;
+        denomInputs.forEach(input => {
+          const val = parseFloat(input.dataset.value || 0);
+          const count = parseInt(input.value || 0, 10);
+          const subtotal = val * count;
+          const subtotalElem = document.getElementById(`subtotal-${input.dataset.denom}`);
+          if (subtotalElem) {
+            subtotalElem.textContent = subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' EGP';
+          }
+          physicalSum += subtotal;
+        });
+
+        const physicalDisplay = document.getElementById('physical-drawer-total');
+        const varianceDisplay = document.getElementById('drawer-variance-amount');
+        const varianceStatus = document.getElementById('drawer-variance-status');
+
+        if (physicalDisplay) {
+          physicalDisplay.textContent = physicalSum.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        const delta = physicalSum - expectedTotal;
+        if (varianceDisplay && varianceStatus) {
+          if (Math.abs(delta) < 0.01) {
+            varianceDisplay.textContent = '0.00 EGP';
+            varianceDisplay.className = 'font-label-numeric text-label-numeric text-tertiary';
+            varianceStatus.textContent = 'MATCH / مطابق 100%';
+            varianceStatus.className = 'font-label-code text-label-code text-tertiary bg-tertiary-container/30 px-space-xs py-0.5 rounded-lg';
+          } else if (delta > 0) {
+            varianceDisplay.textContent = '+' + delta.toLocaleString('en-US', { minimumFractionDigits: 2 }) + ' EGP';
+            varianceDisplay.className = 'font-label-numeric text-label-numeric text-error';
+            varianceStatus.textContent = 'OVERAGE / زيادة نقدية';
+            varianceStatus.className = 'font-label-code text-label-code text-error bg-error-container/40 px-space-xs py-0.5 rounded-lg';
+          } else {
+            varianceDisplay.textContent = delta.toLocaleString('en-US', { minimumFractionDigits: 2 }) + ' EGP';
+            varianceDisplay.className = 'font-label-numeric text-label-numeric text-error';
+            varianceStatus.textContent = 'DEFICIT / عجز بالدرج';
+            varianceStatus.className = 'font-label-code text-label-code text-error bg-error-container/40 px-space-xs py-0.5 rounded-lg';
+          }
+        }
+      }
+
+      denomInputs.forEach(i => i.addEventListener('input', recalc));
+    });
+
+    function triggerPrintReport() {
+      const button = document.getElementById('primary-lock-btn');
+      if (button) {
+        button.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Printing & Locking Terminal...</span>';
+        setTimeout(() => {
+          alert('Shift #2 Successfully Locked. Official Z-Report Fiscal Tape Sent to EPSON Thermal POS-80. Drawer Kick Fired.');
+          button.innerHTML = '<span class="material-symbols-outlined text-[20px]">lock_clock</span><span>Shift #2 Locked & Archived</span>';
+          button.classList.replace('bg-primary-container', 'bg-surface-container-highest');
+        }, 1200);
+      }
+    }
+  </script>
+<!-- TOP WORKSPACE SUB-HEADER & CONTEXT BAR -->
+<div class="px-margin py-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="p-space-xs bg-primary-container/20 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">calculate</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">Shift #2 Reconciliation &amp; Drawer Closing</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-normal" dir="rtl">(تقفيل الدرج وتقرير الوردية Z)</span>
+</div>
+<div class="flex items-center gap-space-md text-secondary text-body-sm font-body-sm">
+<span>Terminal: <strong class="text-on-surface font-label-code">POS-TRM-04</strong></span>
+<span>•</span>
+<span>Cashier: <strong class="text-on-surface">Ahmed Mansour (#9021)</strong></span>
+<span>•</span>
+<span>Shift Window: <strong class="text-on-surface">14:00 - 22:00</strong> <span class="text-tertiary font-label-code">(8h 00m Complete)</span></span>
+</div>
+</div>
+</div>
+<!-- Right Controls: Status & Hotkey Indicators -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-lg">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-code text-label-code text-primary uppercase tracking-wide">RECONCILIATION IN PROGRESS (جاري الجرد)</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-xs py-1 bg-surface-container-high rounded-lg font-label-code text-label-code text-secondary">
+<kbd class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface">F12</kbd>
+<span>Print Z-Report</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-xs py-1 bg-surface-container-high rounded-lg font-label-code text-label-code text-secondary">
+<kbd class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface">ESC</kbd>
+<span>Cancel</span>
+</div>
+</div>
+</div>
+<!-- 12-COLUMN MAIN DENSE WORKSPACE GRID -->
+<div class="p-margin grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+<!-- ======================================================== -->
+<!-- LEFT 8 COLUMNS: CASH TALLY, 18-LINE DELTA, OPERATIONAL STATS -->
+<!-- ======================================================== -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- SECTION A: PHYSICAL CASH DRAWER COUNT (جرد النقدية الورقية بالخزينة) -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary">payments</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight">Physical Cash Drawer Tally</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">جرد النقدية الفعلية بالدرج حسب الفئات</span>
+</div>
+</div>
+<!-- Auto-Reconciliation Badge -->
+<div class="flex items-center gap-space-xs bg-tertiary-container/20 px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span class="font-label-code text-label-code text-tertiary" id="drawer-variance-status">MATCH / مطابق 100%</span>
+</div>
+</div>
+<!-- Denomination Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs">
+<!-- 200 EGP Note -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-9 bg-surface-container-highest rounded flex flex-col items-center justify-center">
+<span class="font-label-numeric text-[13px] text-on-surface font-bold">200</span>
+<span class="text-[9px] text-secondary font-label-code leading-none">EGP</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold block">مائتا جنيه</span>
+<span class="font-label-code text-label-code text-secondary">Banknote × 200</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-lowest rounded px-space-xs py-1">
+<input class="denom-qty w-16 bg-transparent text-right font-label-numeric text-label-numeric text-on-surface outline-none" data-denom="200" data-value="200" min="0" type="number" value="100"/>
+<span class="text-secondary text-body-sm pl-1">ورقة</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface w-28 text-right font-bold" id="subtotal-200">20,000.00 EGP</span>
+</div>
+</div>
+<!-- 100 EGP Note -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-9 bg-surface-container-highest rounded flex flex-col items-center justify-center">
+<span class="font-label-numeric text-[13px] text-on-surface font-bold">100</span>
+<span class="text-[9px] text-secondary font-label-code leading-none">EGP</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold block">مائة جنيه</span>
+<span class="font-label-code text-label-code text-secondary">Banknote × 100</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-lowest rounded px-space-xs py-1">
+<input class="denom-qty w-16 bg-transparent text-right font-label-numeric text-label-numeric text-on-surface outline-none" data-denom="100" data-value="100" min="0" type="number" value="50"/>
+<span class="text-secondary text-body-sm pl-1">ورقة</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface w-28 text-right font-bold" id="subtotal-100">5,000.00 EGP</span>
+</div>
+</div>
+<!-- 50 EGP Note -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-9 bg-surface-container-highest rounded flex flex-col items-center justify-center">
+<span class="font-label-numeric text-[13px] text-on-surface font-bold">50</span>
+<span class="text-[9px] text-secondary font-label-code leading-none">EGP</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold block">خمسون جنيهاً</span>
+<span class="font-label-code text-label-code text-secondary">Banknote × 50</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-lowest rounded px-space-xs py-1">
+<input class="denom-qty w-16 bg-transparent text-right font-label-numeric text-label-numeric text-on-surface outline-none" data-denom="50" data-value="50" min="0" type="number" value="24"/>
+<span class="text-secondary text-body-sm pl-1">ورقة</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface w-28 text-right font-bold" id="subtotal-50">1,200.00 EGP</span>
+</div>
+</div>
+<!-- 20 EGP Note (Plastic/Paper) -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-9 bg-surface-container-highest rounded flex flex-col items-center justify-center">
+<span class="font-label-numeric text-[13px] text-on-surface font-bold">20</span>
+<span class="text-[9px] text-secondary font-label-code leading-none">EGP</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold block">عشرون جنيهاً</span>
+<span class="font-label-code text-label-code text-secondary">Banknote × 20</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-lowest rounded px-space-xs py-1">
+<input class="denom-qty w-16 bg-transparent text-right font-label-numeric text-label-numeric text-on-surface outline-none" data-denom="20" data-value="20" min="0" type="number" value="25"/>
+<span class="text-secondary text-body-sm pl-1">ورقة</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface w-28 text-right font-bold" id="subtotal-20">500.00 EGP</span>
+</div>
+</div>
+<!-- 10 EGP & Coins -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-9 bg-surface-container-highest rounded flex flex-col items-center justify-center">
+<span class="font-label-numeric text-[13px] text-on-surface font-bold">10/5</span>
+<span class="text-[9px] text-secondary font-label-code leading-none">EGP</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold block">فكة / عملات صغيرة</span>
+<span class="font-label-code text-label-code text-secondary">10s, 5s &amp; Metal Coins</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-lowest rounded px-space-xs py-1">
+<input class="denom-qty w-16 bg-transparent text-right font-label-numeric text-label-numeric text-on-surface outline-none" data-denom="coins" data-value="1" min="0" type="number" value="0"/>
+<span class="text-secondary text-body-sm pl-1">قيمة</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface w-28 text-right font-bold" id="subtotal-coins">0.00 EGP</span>
+</div>
+</div>
+<!-- Total Count Metric Callout Box -->
+<div class="bg-surface-container-high p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-secondary uppercase">Expected Shift Balance (المطلوب دفترياً)</span>
+<span class="font-label-numeric text-headline-sm text-secondary">26,700.00 EGP</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-code text-label-code text-secondary uppercase">Variance (الفارق)</span>
+<span class="font-label-numeric text-headline-sm text-tertiary" id="drawer-variance-amount">0.00 EGP</span>
+</div>
+</div>
+</div>
+<!-- Tally Footer Summary Bar -->
+<div class="mt-space-xs p-space-sm bg-surface-container-lowest rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px]">task_alt</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Total Physical Cash in Drawer (إجمالي النقدية بالجرد)</span>
+<span class="font-body-sm text-body-sm text-secondary">Counted 199 verified valid banknotes with 0 counterfeit flags</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-tertiary leading-none" id="physical-drawer-total">26,700.00</span>
+<span class="font-headline-sm text-headline-sm text-tertiary">EGP</span>
+</div>
+</div>
+</div>
+<!-- SECTION B: 18 VODAFONE CASH LINES DELTA & DIGITAL RECONCILIATION -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">sim_card_download</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight">18-Line Digital Float Delta (مطابقة المحافظ الـ 18)</span>
+<span class="font-body-sm text-body-sm text-secondary">Multi-line pool aggregated opening and closing electronic balances</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-code text-label-code text-tertiary uppercase">All 18 Nodes Synced</span>
+</div>
+</div>
+<!-- Float Balance Delta Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-secondary uppercase">Opening Digital Float (رصيد أول)</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">343,300.00</span>
+<span class="font-body-sm text-body-sm text-secondary">EGP</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Snapshotted at 14:00:00</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-secondary uppercase">Net Cash-In Delta (صافي الإيداعات)</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-tertiary">+16,700.00</span>
+<span class="font-body-sm text-body-sm text-secondary">EGP</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Digital Inflow into SIMs</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-secondary uppercase">Closing Digital Float (رصيد الإغلاق)</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary">360,000.00</span>
+<span class="font-body-sm text-body-sm text-secondary">EGP</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Current Network Total (18 SIMs)</span>
+</div>
+</div>
+<!-- 18 SIM Grid Micro-Status Preview -->
+<div class="mt-space-xs bg-surface-container p-space-sm rounded-lg">
+<div class="flex items-center justify-between pb-space-xs text-secondary font-label-code text-label-code">
+<span>ACTIVE SIM NETWORK CLUSTER (18 LINES AUDIT)</span>
+<span class="text-tertiary">100% OPERATIONAL &amp; ZERO DISCREPANCY</span>
+</div>
+<!-- Dense 18-cell mini-grid -->
+<div class="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-9 gap-1.5">
+<!-- SIM 1-6 -->
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 01</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">20.5K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 02</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">19.8K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 03</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">21.2K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 04</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">20.0K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 05</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">22.1K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 06</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">18.9K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<!-- SIM 7-12 -->
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 07</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">20.4K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 08</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">20.0K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 09</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">19.5K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 10</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">20.8K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 11</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">19.2K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 12</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">20.1K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<!-- SIM 13-18 -->
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 13</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">19.9K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 14</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">21.5K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 15</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">20.2K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 16</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">19.6K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 17</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">18.5K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded flex flex-col items-center text-center">
+<span class="font-label-code text-[10px] text-secondary">SIM 18</span>
+<span class="font-label-numeric text-[11px] text-on-surface font-semibold">20.0K</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-0.5"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION C: SHIFT OPERATIONS & COMMISSION SUMMARY + SUPERVISOR VERIFICATION -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary">query_stats</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight">Shift Operations &amp; Commission Audit</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">ملخص عمليات الإيداع والسحب والعمولات المكتسبة</span>
+</div>
+</div>
+<span class="font-label-code text-label-code bg-surface-container px-space-sm py-1 rounded-lg text-secondary">62 Transactions Total</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm">
+<!-- Total Cash In -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<span class="font-label-code text-label-code text-secondary block">Cash-In (إيداع نقدي)</span>
+<span class="font-headline-md text-headline-md text-tertiary font-bold">+48,200.00</span>
+<span class="font-body-sm text-body-sm text-secondary">EGP</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs text-body-sm text-secondary">
+<span>38 Txns</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">arrow_downward</span>
+</div>
+</div>
+<!-- Total Cash Out -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<span class="font-label-code text-label-code text-secondary block">Cash-Out (سحب نقدي)</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">-31,500.00</span>
+<span class="font-body-sm text-body-sm text-secondary">EGP</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs text-body-sm text-secondary">
+<span>24 Txns</span>
+<span class="material-symbols-outlined text-primary text-[18px]">arrow_upward</span>
+</div>
+</div>
+<!-- Commission Retained -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<span class="font-label-code text-label-code text-secondary block">Agent Commission (العمولة)</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">+1,845.00</span>
+<span class="font-body-sm text-body-sm text-secondary">EGP</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs text-body-sm text-secondary">
+<span>Auto-credited</span>
+<span class="material-symbols-outlined text-on-surface text-[18px]">savings</span>
+</div>
+</div>
+<!-- Net Physical Drawer Flow -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<span class="font-label-code text-label-code text-secondary block">Net Cash Delta (صافي النقد)</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">+16,700.00</span>
+<span class="font-body-sm text-body-sm text-secondary">EGP</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs text-body-sm text-secondary">
+<span>Drawer Surplus</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">trending_up</span>
+</div>
+</div>
+</div>
+<!-- Supervisor Sign-Off & Verification Box -->
+<div class="bg-surface-container-high p-space-sm rounded-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Supervisor Sign-Off Authenticated</span>
+<span class="font-label-code text-label-code text-tertiary bg-tertiary-container/30 px-space-xs py-0.5 rounded">PIN OK</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Approved by Area Supervisor: <strong>Mohamed Tarek (#SUP-108)</strong> at 22:00:15</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-label-code text-secondary">STATION HASH:</span>
+<code class="px-space-xs py-1 bg-surface-container-lowest text-tertiary font-label-code text-label-code rounded">#8F92-Z-20241024</code>
+</div>
+</div>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- RIGHT 4 COLUMNS: LIVE THERMAL TAPE Z-REPORT PREVIEW & ACTIONS -->
+<!-- ======================================================== -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Thermal Z-Tape Card Component (White Realistic Thermal Paper Simulation) -->
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-xl flex flex-col">
+<div class="flex items-center justify-between px-space-xs pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">receipt</span>
+<span class="font-label-code text-label-code text-on-surface uppercase">Live Thermal Tape Preview</span>
+</div>
+<span class="font-label-code text-label-code text-secondary bg-surface-container px-space-xs py-0.5 rounded">EPSON 80mm</span>
+</div>
+<!-- Realistic Thermal Paper Slip -->
+<div class="relative bg-white text-surface-container-lowest p-space-md rounded-sm shadow-2xl font-label-code flex flex-col text-[11px] leading-relaxed select-all">
+<!-- Top Perforation SVG Zigzag -->
+<div class="absolute -top-1 left-0 right-0 h-2 bg-[radial-gradient(circle,transparent_4px,#ffffff_4px)] bg-[length:10px_10px]"></div>
+<!-- Slip Header -->
+<div class="flex flex-col items-center text-center pb-2">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-white mb-1">
+<span class="material-symbols-outlined text-[18px]">cell_tower</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-surface-container-lowest font-bold uppercase tracking-wider">VODAFONE CASH</span>
+<span class="text-[10px] text-surface-container-high">فودافون كاش - خدمات الدفع الإلكتروني</span>
+<span class="text-[9px] text-secondary-container">Tax ID (البطاقة الضريبية): 412-882-901</span>
+<span class="text-[9px] text-secondary-container">Branch: #104 Cairo Central Retail Hub</span>
+</div>
+<div class="text-center py-1 bg-surface-container-lowest text-white font-bold text-[10px] uppercase tracking-widest my-1">
+            *** OFFICIAL FISCAL Z-REPORT ***
+          </div>
+<div class="text-center text-[10px] font-semibold text-surface-container-highest">
+            تقرير تقفيل الدرج والوردية اليومي (Z)
+          </div>
+<!-- Metadata Grid -->
+<div class="flex flex-col gap-0.5 py-2">
+<div class="flex justify-between">
+<span class="text-secondary-container">Z-REPORT NO:</span>
+<span class="font-bold">#Z-2024-001048</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary-container">DATE / TIME:</span>
+<span>24-10-2024 22:00:15</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary-container">TERMINAL / SHIFT:</span>
+<span>POS-TRM-04 / SHIFT #2</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary-container">CASHIER (الصراف):</span>
+<span>A. Mansour (#9021)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary-container">SUPERVISOR (المشرف):</span>
+<span>M. Tarek (#SUP-108)</span>
+</div>
+</div>
+<div class="text-[9px] text-center text-secondary-container py-0.5">------------------------------------------------</div>
+<!-- Financial Breakdown Table -->
+<div class="flex flex-col gap-1 py-1 font-label-code text-[11px]">
+<div class="flex justify-between">
+<span>OPENING FLOAT (رصيد البداية):</span>
+<span class="font-bold">343,300.00 EGP</span>
+</div>
+<div class="flex justify-between">
+<span>+ CASH-IN 38 TXN (إيداعات):</span>
+<span class="font-bold">+48,200.00 EGP</span>
+</div>
+<div class="flex justify-between">
+<span>- CASH-OUT 24 TXN (سحوبات):</span>
+<span class="font-bold">-31,500.00 EGP</span>
+</div>
+<div class="flex justify-between">
+<span>+ AGENT COMMISSIONS (عمولة):</span>
+<span class="font-bold">+1,845.00 EGP</span>
+</div>
+<div class="flex justify-between">
+<span>CLOSING DIGITAL FLOAT:</span>
+<span class="font-bold">360,000.00 EGP</span>
+</div>
+</div>
+<div class="text-[9px] text-center text-secondary-container py-0.5">================================================</div>
+<!-- Cash Drawer Settlement Tally -->
+<div class="flex flex-col gap-1 py-1">
+<div class="flex justify-between">
+<span>DRAWER OPENING CASH:</span>
+<span>10,000.00 EGP</span>
+</div>
+<div class="flex justify-between">
+<span>EXPECTED PHYSICAL CASH:</span>
+<span class="font-bold">26,700.00 EGP</span>
+</div>
+<div class="flex justify-between font-bold">
+<span>PHYSICAL COUNTED (الفعلي):</span>
+<span>26,700.00 EGP</span>
+</div>
+<div class="flex justify-between font-bold bg-surface-container-high/10 p-0.5">
+<span>DRAWER VARIANCE (الفارق):</span>
+<span class="text-tertiary-container font-extrabold">0.00 EGP (MATCH)</span>
+</div>
+</div>
+<div class="text-[9px] text-center text-secondary-container py-0.5">------------------------------------------------</div>
+<!-- 18 SIM Line Hash Audit -->
+<div class="flex flex-col gap-0.5 text-[9px] text-secondary-container py-1">
+<div class="flex justify-between">
+<span>18-SIM Cluster Status:</span>
+<span class="text-surface-container-lowest font-bold">ALL 18 VERIFIED</span>
+</div>
+<div class="flex justify-between">
+<span>SIM Balance Delta Check:</span>
+<span class="text-surface-container-lowest font-bold">100% BALANCED</span>
+</div>
+<div class="flex justify-between">
+<span>NTRA / CBE Fiscal Stamp:</span>
+<span>STAMP-VALID-OK</span>
+</div>
+</div>
+<!-- Simulated Fiscal Barcode -->
+<div class="flex flex-col items-center pt-2">
+<div class="w-full flex items-center justify-center gap-0.5 h-10 px-2 overflow-hidden bg-surface-container-lowest/5 p-1 rounded">
+<!-- Barcode Lines -->
+<span class="w-1 h-8 bg-surface-container-lowest"></span>
+<span class="w-0.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-1.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-0.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-2 h-8 bg-surface-container-lowest"></span>
+<span class="w-1 h-8 bg-surface-container-lowest"></span>
+<span class="w-0.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-1.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-2 h-8 bg-surface-container-lowest"></span>
+<span class="w-0.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-1 h-8 bg-surface-container-lowest"></span>
+<span class="w-0.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-1.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-2 h-8 bg-surface-container-lowest"></span>
+<span class="w-1 h-8 bg-surface-container-lowest"></span>
+<span class="w-0.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-1.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-0.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-2 h-8 bg-surface-container-lowest"></span>
+<span class="w-1 h-8 bg-surface-container-lowest"></span>
+<span class="w-0.5 h-8 bg-surface-container-lowest"></span>
+<span class="w-1.5 h-8 bg-surface-container-lowest"></span>
+</div>
+<span class="text-[9px] tracking-widest text-secondary-container mt-1 font-label-code">
+              *20241024-Z-001048-TRM04*
+            </span>
+</div>
+<div class="text-center text-[8px] text-secondary-container pt-1 pb-1">
+            End of Shift #2 • Keep slip for regional auditor records
+          </div>
+<!-- Bottom Perforation SVG Zigzag -->
+<div class="absolute -bottom-1 left-0 right-0 h-2 bg-[radial-gradient(circle,transparent_4px,#ffffff_4px)] bg-[length:10px_10px]"></div>
+</div>
+<!-- QUICK COMMITMENT CTA ACTIONS -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<!-- Primary Commitment Action -->
+<button class="w-full bg-primary-container text-white py-space-sm px-space-md rounded-lg font-headline-sm text-headline-sm flex items-center justify-between shadow-lg hover:bg-inverse-primary active:translate-y-0.5 transition-all" id="primary-lock-btn" onclick="triggerPrintReport()">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[22px]">print</span>
+<div class="flex flex-col text-left">
+<span class="leading-tight font-bold">Print Z-Report &amp; Lock Shift</span>
+<span class="text-[11px] font-normal opacity-90" dir="rtl">طباعة تقرير Z وإغلاق الخزينة</span>
+</div>
+</div>
+<kbd class="px-1.5 py-0.5 bg-black/30 rounded text-[11px] font-label-code">[F12]</kbd>
+</button>
+<!-- Secondary Actions -->
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface py-2 px-space-xs rounded-lg font-body-sm text-body-sm flex items-center justify-center gap-1 transition-colors" onclick="alert('Sending WhatsApp formatted Z-Summary to Floor Manager: +20 100 234 5678');">
+<span class="material-symbols-outlined text-[16px] text-tertiary">send</span>
+<span>WhatsApp Summary</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface py-2 px-space-xs rounded-lg font-body-sm text-body-sm flex items-center justify-center gap-1 transition-colors" onclick="alert('Exporting Fiscal Z-Shift CSV Audit log to USB / POS Drive');">
+<span class="material-symbols-outlined text-[16px] text-secondary">file_download</span>
+<span>Export Fiscal CSV</span>
+</button>
+</div>
+<button class="w-full bg-surface-container-low hover:bg-surface-container text-secondary py-1.5 rounded font-label-code text-label-code flex items-center justify-center gap-1 transition-colors" onclick="alert('Reprinting previous Shift #1 Z-Tape record...');">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span>Reprint Previous Shift Z-Tape (إعادة طباعة سابق)</span>
+</button>
+</div>
+</div>
+<!-- Quick Safety & Cashier Checklist Notice -->
+<div class="bg-surface-container p-space-sm rounded-xl flex items-start gap-space-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">info</span>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Handover Checklist (إجراءات التسليم)</span>
+<p class="text-secondary text-body-sm leading-relaxed">
+            Upon pressing <strong class="text-on-surface">Lock Shift [F12]</strong>, physical drawer lock is activated, all SIM sessions are transferred to <strong class="text-on-surface">Shift #3 Teller</strong>, and digital audit hashes are committed to Central Vodafone ERP.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+</body></html>

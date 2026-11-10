@@ -1,0 +1,13 @@
+{
+  "name": "vodafone-cashier-pos",
+  "version": "2.4.0",
+  "description": "Vodafone Cashier & 18-Line Multi-Wallet Management System with Firebase and Node.js Backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["vodafone", "cashier", "pos", "firebase", "wallets"],
+  "author": "Antigravity",
+  "license": "ISC"
+}

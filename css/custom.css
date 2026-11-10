@@ -1,0 +1,177 @@
+/* ==========================================================================
+   Crimson Precision Console - Vodafone Cashier & 18-Line Wallet Management
+   Custom Styles, Animations & Thermal Receipt Printing
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --vodafone-red: #C40000;
+  --vodafone-red-hover: #E60000;
+  --vodafone-red-glow: rgba(196, 0, 0, 0.35);
+  --bg-dark: #0F1117;
+  --surface-low: #181C24;
+  --surface-card: #1E222D;
+  --surface-border: #282E3C;
+  --color-emerald: #10B981;
+  --color-amber: #F59E0B;
+}
+
+body {
+  font-family: 'Cairo', 'Manrope', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-dark);
+  color: #E2E2EB;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+}
+
+/* Numerics and Tabular digits */
+.tabular-nums,
+.num-font {
+  font-family: 'Hanken Grotesk', 'Cairo', monospace !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111319;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2d38;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3c404f;
+}
+
+/* Laser Scanner Animation */
+@keyframes laserSweep {
+  0% {
+    top: 5%;
+    opacity: 0.9;
+  }
+  50% {
+    top: 92%;
+    opacity: 1;
+  }
+  100% {
+    top: 5%;
+    opacity: 0.9;
+  }
+}
+
+.laser-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff3b30, #ff0000, #ff3b30, transparent);
+  box-shadow: 0 0 14px 3px rgba(255, 0, 0, 0.85);
+  animation: laserSweep 2.2s ease-in-out infinite;
+  z-index: 10;
+}
+
+/* Active Line Indicator */
+.line-active-indicator {
+  border-right: 4px solid var(--vodafone-red);
+}
+
+/* Pulse Animation for Status */
+@keyframes softPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.96); }
+}
+
+.pulse-status {
+  animation: softPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glassmorphism Accents */
+.glass-panel {
+  background: rgba(24, 28, 36, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Section Transitions */
+.view-section {
+  display: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.view-section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button & Card Micro-Interactions */
+.interactive-card {
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.interactive-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(196, 0, 0, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45);
+}
+
+/* Badges */
+.badge-liquid {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+.badge-warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: #F59E0B;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+.badge-crimson {
+  background: rgba(196, 0, 0, 0.12);
+  color: #EF4444;
+  border: 1px solid rgba(196, 0, 0, 0.3);
+}
+
+/* Thermal POS Slip Styling */
+.thermal-receipt {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ffffff;
+  color: #0f1117;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+  border-radius: 4px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt-area,
+  #printable-receipt-area * {
+    visibility: visible;
+  }
+  #printable-receipt-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,600;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed-dim":"#ffb4a8","on-surface-variant":"#e7bdb6","tertiary-container":"#006e4b","surface-container":"#1e1f26","background":"#111319","on-tertiary-fixed-variant":"#005236","outline":"#ae8882","error":"#ffb4ab","secondary-fixed-dim":"#c3c6d1","on-secondary-fixed":"#181c24","on-error":"#690005","tertiary-fixed":"#6ffbbe","surface-container-highest":"#33343b","on-tertiary-container":"#67f4b7","on-primary-container":"#ffd1ca","on-tertiary":"#003824","surface-variant":"#33343b","surface-tint":"#ffb4a8","inverse-surface":"#e2e2eb","primary-fixed":"#ffdad4","on-primary-fixed":"#410000","on-secondary":"#2c3039","outline-variant":"#5d3f3b","on-secondary-fixed-variant":"#434750","surface-bright":"#373940","on-tertiary-fixed":"#002113","inverse-primary":"#c00000","primary":"#ffb4a8","surface-container-lowest":"#0c0e14","on-background":"#e2e2eb","on-primary":"#690000","secondary-fixed":"#dfe2ed","tertiary-fixed-dim":"#4edea3","on-surface":"#e2e2eb","surface-container-high":"#282a30","inverse-on-surface":"#2e3037","on-secondary-container":"#b5b8c3","on-primary-fixed-variant":"#930000","surface-container-low":"#191b22","on-error-container":"#ffdad6","tertiary":"#4edea3","primary-container":"#c40000","secondary":"#c3c6d1","error-container":"#93000a","secondary-container":"#454952","surface":"#111319","surface-dim":"#111319"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1rem","margin-mobile":"1rem","space-xs":"0.25rem","gutter-compact":"0.75rem","space-xl":"2rem","margin":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-lg":"1.5rem"},"fontFamily":{"body-lg":["Manrope"],"headline-md":["Hanken Grotesk"],"label-code":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-numeric":["Hanken Grotesk"],"display-lg":["Hanken Grotesk"],"display-lg-mobile":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"],"body-sm":["Manrope"],"body-md":["Manrope"]},"fontSize":{"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"500"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"label-code":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-numeric":["1.125rem",{"lineHeight":"1.25rem","letterSpacing":"0.02em","fontWeight":"700"}],"display-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"display-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div><span class="font-label-code text-label-code uppercase tracking-wider text-tertiary">18 Nodes Operational</span></div><span class="font-label-code text-label-code text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded-lg">v2.4 POS</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-headline-sm text-headline-sm">Dashboard</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">نظرة عامة</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="todays-sales" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-headline-sm text-headline-sm">Today's Sales</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">مبيعات اليوم</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="18-line-wallets-manager" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">sim_card_download</span><span class="font-headline-sm text-headline-sm">18 Wallets</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">إدارة الـ 18 خط</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="qr-and-barcode-scanner" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">qr_code_scanner</span><span class="font-headline-sm text-headline-sm">Scanner</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">المسح الضوئي</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="screenshots-and-proof-vault" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-headline-sm text-headline-sm">Proof Vault</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">الاسكرينات</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="drawer-reconciliation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">calculate</span><span class="font-headline-sm text-headline-sm">Drawer Closing</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">تقفيل الدرج</span></a></nav></div><div class="px-space-md flex flex-col gap-space-sm"><div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-code text-label-code text-secondary">CASH POOL LIMIT</span><span class="font-label-numeric text-label-numeric text-on-surface">74%</span></div><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-[74%]"></div></div><div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant"><span>18 Lines Float</span><span>EGP 360K</span></div></div><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="font-label-code text-label-code">POS-TRM-04</span></div><a class="text-on-surface-variant hover:text-on-surface" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-low/95 backdrop-blur-md z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Vodafone Cash Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQirkeHe2-RNVwQfG8p33WlAz_txKaPv7eeU05_v6IbvcV7G57yj_0lq2KchrK0TtCEUI65wL-EawbgUKlBQxtRNdiA3ODkkY4jRh7XdFBflQMC_nu6OCtp7WoWGkgc-UQknbzIb4fy6lyHOaGbxzOJYHP52XiRxK6K-Z57aaoxKZx4lUYdBZHWKZ-49wlxVFOR3ci6tWX5bzwyFl09MFTwk_9qotd0UPp2sQrZ5WT"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Vodafone Cash</span><span class="font-label-code text-label-code text-primary leading-tight">Agent Multi-Line POS</span></div></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-tertiary-container/30 px-space-sm py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-code text-label-code text-on-tertiary-container uppercase tracking-wide">Shift Open</span></div><div class="flex flex-col"><span class="font-label-code text-label-code text-secondary uppercase">Drawer Balance (رصيد الخزينة)</span><span class="font-label-numeric text-label-numeric text-on-surface">24,850.00 <span class="font-body-sm text-body-sm text-tertiary">EGP</span></span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container px-space-sm py-1.5 rounded-lg w-64 gap-space-xs"><span class="material-symbols-outlined text-[18px] text-outline">search</span><span class="font-body-sm text-body-sm text-outline">Search MSISDN / 010...</span></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex flex-col items-end"><span class="font-label-numeric text-label-numeric text-on-surface">14:32:08</span><span class="font-label-code text-label-code text-secondary">24 OCT 2024</span></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col items-end"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Ahmed Mansour</span><span class="font-label-code text-label-code text-on-surface-variant leading-tight">Shift #2 • Teller (كاشير)</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASb6exdMbbj11Na0GZ-QpseoHTFnIGcPG6rnEb9wdZT1SF4OaFHE81YGr68kskUceOx_ihtHYg79Ih04Wq0GquorEVx6HlwR-gBrIZ6-9UAssjpqAh9BTp0BmO4WFA8Sgr6KzS24EFHYGYEfanG_2-oautTva7R3_9MezJQMVpRv7auQOdbcbYQKmoGMLBtaOvDTyjItvi91AIH1TN7FJxP25NviavJBbR45Fl0hgY"/></div></div></header><main class="relative pt-16 w-full bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-margin flex flex-col gap-space-lg">
+<!-- Top Auditing Summary & KPI Strip -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-secondary uppercase tracking-wider">Total Proofs Today • إجمالي الإيصالات</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">114</span>
+<span class="font-body-sm text-body-sm text-secondary">slips</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">trending_up</span> +24% vs shift #1
+          </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">receipt_long</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-tertiary uppercase tracking-wider">Auto-Matched • تم التحقق</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-tertiary">109</span>
+<span class="font-body-sm text-body-sm text-tertiary">95.6%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">EGP 214,800 Reconciled</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-primary-fixed-dim uppercase tracking-wider">Pending Review • قيد المراجعة</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-primary-fixed-dim">04</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">awaits teller</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Est. EGP 9,350</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">pending_actions</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-error uppercase tracking-wider">Flagged / Dups • مرفوض / مكرر</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-error">01</span>
+<span class="font-body-sm text-body-sm text-error">disputed</span>
+</div>
+<span class="font-body-sm text-body-sm text-error/80">Ref #TX-78192 duplicate</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error-container/30 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+</div>
+</div>
+<!-- Main Workspace Split: Left (Uploader & Proof Vault Grid) + Right (Inspection OCR Inspector) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column (8 of 12) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Live Drag-and-Drop Ingestion Hub -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-48 h-48 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">cloud_upload</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Screenshot &amp; Receipt Ingestion Hub</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant" dir="rtl">رفع وتدقيق إيصالات فودافون كاش الذكية (OCR Matcher)</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-code text-label-code text-tertiary">OCR ENGINE v4.2 ONLINE</span>
+</div>
+</div>
+<!-- Drop Area Zone -->
+<div class="relative bg-surface-container-lowest p-space-lg rounded-xl flex flex-col items-center justify-center text-center gap-space-sm group cursor-pointer transition-all hover:bg-surface-container">
+<input accept="image/*,.pdf" class="absolute inset-0 opacity-0 cursor-pointer z-10" id="proof-file-input" type="file"/>
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[32px]">add_photo_alternate</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">اسحب اسكرينة التحويل هنا أو اضغط للرفع</span>
+<span class="font-body-sm text-body-sm text-secondary">Drop transaction screenshot, Ana Vodafone receipt, or POS thermal photo</span>
+</div>
+<div class="flex items-center gap-space-md pt-space-xs">
+<span class="font-label-code text-label-code bg-surface-container-high px-space-sm py-1 rounded text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">document_scanner</span> PNG, JPG, WEBP, PDF
+              </span>
+<span class="font-label-code text-label-code bg-primary-container/20 text-on-primary-container px-space-sm py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span> Direct Camera Capture [F4]
+              </span>
+</div>
+</div>
+<!-- Auto-OCR extraction status banner -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">smart_toy</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+<strong>Smart Receipt Scanner:</strong> Auto-extracts Amount (المبلغ), Phone MSISDN (رقم الهاتف), and TX Reference ID without manual typing.
+              </span>
+</div>
+<span class="font-label-code text-label-code text-secondary bg-surface-container-highest px-space-xs py-0.5 rounded">LATENCY ~340ms</span>
+</div>
+</div>
+<!-- Filter Controls Bar -->
+<div class="bg-surface-container-low p-space-sm rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<!-- Category Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 md:pb-0" id="filter-tabs">
+<button class="filter-btn active px-space-md py-space-xs rounded-lg font-headline-sm text-body-md bg-primary-container text-on-primary-container flex items-center gap-1">
+<span>All Proofs (الكل)</span>
+<span class="bg-primary/20 text-on-primary-container px-1.5 py-0.2 rounded-full font-label-code text-label-code">114</span>
+</button>
+<button class="filter-btn px-space-md py-space-xs rounded-lg font-headline-sm text-body-md text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1">
+<span>Pending (قيد المراجعة)</span>
+<span class="bg-primary-container/30 text-primary-fixed-dim px-1.5 py-0.2 rounded-full font-label-code text-label-code">4</span>
+</button>
+<button class="filter-btn px-space-md py-space-xs rounded-lg font-headline-sm text-body-md text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1">
+<span>Verified (تمت المطابقة)</span>
+<span class="bg-tertiary-container/30 text-tertiary px-1.5 py-0.2 rounded-full font-label-code text-label-code">109</span>
+</button>
+<button class="filter-btn px-space-md py-space-xs rounded-lg font-headline-sm text-body-md text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1">
+<span>Flagged (مرفوض / مكرر)</span>
+<span class="bg-error-container/30 text-error px-1.5 py-0.2 rounded-full font-label-code text-label-code">1</span>
+</button>
+</div>
+<!-- Controls: Line Dropdown & Search -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-secondary mr-1">sim_card</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option class="bg-surface-container" value="all">All Lines (الـ 18 خط)</option>
+<option class="bg-surface-container" value="1">Line 01 • 01019283741 (Agent)</option>
+<option class="bg-surface-container" selected="" value="2">Line 02 • 01099221144 (Agent)</option>
+<option class="bg-surface-container" value="3">Line 03 • 01088332211 (Cash In)</option>
+<option class="bg-surface-container" value="4">Line 04 • 01077443322 (Float High)</option>
+<option class="bg-surface-container" value="5">Line 05 • 01066554433 (Teller A)</option>
+<option class="bg-surface-container" value="6">Line 06 • 01055667788 (VIP Cash)</option>
+<option class="bg-surface-container" value="18">Line 18 • 01000998877 (Emergency Pool)</option>
+</select>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high p-2 rounded-lg text-on-surface-variant" title="Refresh Feed">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Screenshots Gallery & Proof Vault Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="gallery-grid">
+<!-- Card 1: Selected active audit item -->
+<div class="proof-card bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col transition-all cursor-pointer ring-1 ring-primary/40 bg-surface-container/70" onclick="selectAuditItem(1)">
+<div class="relative h-44 bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-300 hover:scale-105" data-alt="A smartphone screenshot of Vodafone Cash official transaction success confirmation screen in Arabic and English showing 2500 EGP transfer with checkmark, transaction timestamp, dark mode UI with red accents, sharp high contrast fintech style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDURVgAqeIh8G36ZxrNVk9o4sxSzkrOAEOcDJSYZ1RzgmnFbtXxrmO1LB-QUnBCQCXbCR1S32yrSVoevFgOOhKU6WM4_q8rAzCIsKHcrSU5On3zAwnP4rE8AFnsLZEX-Bfn-u4awgCeXYrk4FCiVFU5_w5IhJPrszEutytf1v0fC_PkDEsYF_P72qp4gP8Pi7yNtlVQR3VzKeGr4NvooNMQ3vhyhDxhiPCBeca0SpzC"/>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-space-xs py-1 rounded flex items-center gap-1 font-label-code text-label-code text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+<span>MATCH: LINE 02</span>
+</div>
+<div class="absolute top-2 right-2 bg-tertiary-container/90 backdrop-blur-md text-on-tertiary px-space-sm py-0.5 rounded font-label-code text-label-code uppercase tracking-wider">
+                Verified (مطابق)
+              </div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center bg-surface-container-lowest/80 backdrop-blur-sm px-space-sm py-1 rounded">
+<span class="font-label-code text-label-code text-secondary font-mono">#TX-94810283</span>
+<span class="font-body-sm text-body-sm text-tertiary font-bold">14:28:10 (منذ 12 دقيقة)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-code text-label-code text-secondary uppercase">Destination Line</span>
+<div class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1">
+<span>Line 02</span>
+<span class="font-label-code text-label-code text-secondary font-mono">01099221144</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-code text-label-code text-secondary uppercase">Amount (المبلغ)</span>
+<span class="font-label-numeric text-label-numeric text-primary font-bold">2,500.00 <span class="text-body-sm">EGP</span></span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm bg-surface-container px-space-sm py-1.5 rounded">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">perm_phone_msg</span>
+<span class="font-mono text-on-surface">01004561234</span>
+</div>
+<span class="text-secondary">Mohamed El-Sayed</span>
+</div>
+<!-- Quick action bar -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1">
+<button class="bg-surface-container hover:bg-surface-container-highest text-on-surface p-1.5 rounded" title="Open Lightbox">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-highest text-on-surface p-1.5 rounded" title="Download Screenshot">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-highest text-error p-1.5 rounded" title="Flag Discrepancy">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+</button>
+</div>
+<button class="bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary-container px-space-sm py-1 rounded font-label-code text-label-code font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">link</span> Match Ledger
+                </button>
+</div>
+</div>
+</div>
+<!-- Card 2: Needs cashier manual approval -->
+<div class="proof-card bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col transition-all cursor-pointer hover:bg-surface-container/60" onclick="selectAuditItem(2)">
+<div class="relative h-44 bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-300 hover:scale-105" data-alt="A photo taken of a printed paper thermal receipt slip from a Vodafone Cash merchant terminal lying on a dark cashier counter, showing transaction total 4800 EGP, clear monospace receipt typography, angled top-down lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ8EtKyvNU6clgvSqLAnIIAzLGJH4hwQSYT89KhPUpnFtrFzDAKqSUpeCvE0uR2xnVAryGzpMWeRVtCLDuMsGDJC8jY5B3qBA0l1ZpInnUNC6rjxf9eun_BtKitbdgTWP1Dei9Zrhzv9FYsU3U0aHVxrDzNXfyRk6hiFo3atMN0R5kLuK3_4iCgEMrDyOoegGXcV0G4IdBwC1Ps2TbaXD1VizhwhlkWCPu-X7Xnxkt"/>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-space-xs py-1 rounded flex items-center gap-1 font-label-code text-label-code text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed-dim">schedule</span>
+<span>MATCH: LINE 05</span>
+</div>
+<div class="absolute top-2 right-2 bg-surface-container-highest text-primary-fixed-dim px-space-sm py-0.5 rounded font-label-code text-label-code uppercase tracking-wider">
+                Needs Cashier Approval
+              </div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center bg-surface-container-lowest/80 backdrop-blur-sm px-space-sm py-1 rounded">
+<span class="font-label-code text-label-code text-secondary font-mono">#TX-81729011</span>
+<span class="font-body-sm text-body-sm text-secondary">14:15:32 (منذ 25 دقيقة)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-code text-label-code text-secondary uppercase">Destination Line</span>
+<div class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1">
+<span>Line 05</span>
+<span class="font-label-code text-label-code text-secondary font-mono">01066554433</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-code text-label-code text-secondary uppercase">Amount (المبلغ)</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-bold">4,800.00 <span class="text-body-sm text-secondary">EGP</span></span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm bg-surface-container px-space-sm py-1.5 rounded">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">perm_phone_msg</span>
+<span class="font-mono text-on-surface">01091238944</span>
+</div>
+<span class="text-secondary">Tarek Fawzy (ATM Slip)</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1">
+<button class="bg-surface-container hover:bg-surface-container-highest text-on-surface p-1.5 rounded" title="Open Lightbox">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-highest text-on-surface p-1.5 rounded" title="Download Screenshot">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-highest text-error p-1.5 rounded" title="Flag Discrepancy">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+</button>
+</div>
+<button class="bg-tertiary-container/40 hover:bg-tertiary-container text-tertiary px-space-sm py-1 rounded font-label-code text-label-code font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Approve Slip
+                </button>
+</div>
+</div>
+</div>
+<!-- Card 3: Ana Vodafone in-app receipt -->
+<div class="proof-card bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col transition-all cursor-pointer hover:bg-surface-container/60" onclick="selectAuditItem(3)">
+<div class="relative h-44 bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-300 hover:scale-105" data-alt="Screenshot of Ana Vodafone mobile banking app receipt popup, bright clean confirmation ticket showing sent amount 1250 EGP, transaction code, fees zero EGP, phone number destination, dark themed mobile interface screenshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf3hv4ttN0tY_LJYxnXg-nCyVmiD4BykgwJzY7lJKlyiJRrtNQwb2PGwPwWTSe36pWykNv0FI8idE5V0T8hNHwZrMDVSOd9XiHnt7UCCCUU9RKOXaieOCJbaZsq9CNpVgziE4ivCY_X6lyydv8jR1bS79b29MIZE5xV49aKwwdOIUYR_zuMcg8m9DiJf3TTsNEXaaRb6x00gFtxRXOor1GA9Uyt-oGunG2OxQWZHL9"/>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-space-xs py-1 rounded flex items-center gap-1 font-label-code text-label-code text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+<span>MATCH: LINE 01</span>
+</div>
+<div class="absolute top-2 right-2 bg-tertiary-container/90 backdrop-blur-md text-on-tertiary px-space-sm py-0.5 rounded font-label-code text-label-code uppercase tracking-wider">
+                Verified (مطابق)
+              </div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center bg-surface-container-lowest/80 backdrop-blur-sm px-space-sm py-1 rounded">
+<span class="font-label-code text-label-code text-secondary font-mono">#TX-55419200</span>
+<span class="font-body-sm text-body-sm text-secondary">13:50:04 (منذ 42 دقيقة)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-code text-label-code text-secondary uppercase">Destination Line</span>
+<div class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1">
+<span>Line 01</span>
+<span class="font-label-code text-label-code text-secondary font-mono">01019283741</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-code text-label-code text-secondary uppercase">Amount (المبلغ)</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-bold">1,250.00 <span class="text-body-sm text-secondary">EGP</span></span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm bg-surface-container px-space-sm py-1.5 rounded">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">perm_phone_msg</span>
+<span class="font-mono text-on-surface">01023847590</span>
+</div>
+<span class="text-secondary">Kareem Nader</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1">
+<button class="bg-surface-container hover:bg-surface-container-highest text-on-surface p-1.5 rounded" title="Open Lightbox">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-highest text-on-surface p-1.5 rounded" title="Download Screenshot">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-highest text-error p-1.5 rounded" title="Flag Discrepancy">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+</button>
+</div>
+<button class="bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary-container px-space-sm py-1 rounded font-label-code text-label-code font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">link</span> Match Ledger
+                </button>
+</div>
+</div>
+</div>
+<!-- Card 4: Flagged Duplicate Slip -->
+<div class="proof-card bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col transition-all cursor-pointer hover:bg-surface-container/60" onclick="selectAuditItem(4)">
+<div class="relative h-44 bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-70 grayscale-[30%] transition-transform duration-300 hover:scale-105" data-alt="Screenshot of an SMS message on Android showing Vodafone Cash incoming transfer text message, with duplicate warning overlay symbol, crisp high detail fintech review style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF8RHgJIu5jKIMQBgiQ-IAIdYI45WIyu_1pnDp4TDo8XNWsq5UlFQ8d_31YLaoVaAHZsBozcaEeooJaZ09JA8OFEinJyZQ12bCXR4JLlE74xGrYWDi4rMrG2esOY3GtXnXwOwauWzC3FlXAm4ssCRc1vDqKUdVwSvgrtox7CaPaimtu9H9L_dz8NMeqrQUX_lBBV-ncAO0EFOwL42s88WmIuFAOUlVOSv0qZQeLcZO"/>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-space-xs py-1 rounded flex items-center gap-1 font-label-code text-label-code text-error">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>COLLISION: LINE 08</span>
+</div>
+<div class="absolute top-2 right-2 bg-error-container text-on-error-container px-space-sm py-0.5 rounded font-label-code text-label-code uppercase tracking-wider">
+                Flagged: Duplicate Slip
+              </div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center bg-surface-container-lowest/80 backdrop-blur-sm px-space-sm py-1 rounded">
+<span class="font-label-code text-label-code text-error font-mono">#TX-78192004</span>
+<span class="font-body-sm text-body-sm text-error">12:30:19 (منذ ساعتين)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-code text-label-code text-secondary uppercase">Destination Line</span>
+<div class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1">
+<span>Line 08</span>
+<span class="font-label-code text-label-code text-secondary font-mono">01044332211</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-code text-label-code text-secondary uppercase">Amount (المبلغ)</span>
+<span class="font-label-numeric text-label-numeric text-error font-bold">1,800.00 <span class="text-body-sm text-secondary">EGP</span></span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm bg-error-container/20 px-space-sm py-1.5 rounded">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-error">report_problem</span>
+<span class="font-mono text-error font-semibold">Same slip presented yesterday</span>
+</div>
+<span class="text-error font-label-code text-label-code">BLOCKED</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1">
+<button class="bg-surface-container hover:bg-surface-container-highest text-on-surface p-1.5 rounded" title="Open Lightbox">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-highest text-on-surface p-1.5 rounded" title="Download Screenshot">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="bg-secondary-container hover:bg-surface-container-highest text-on-surface px-space-sm py-1 rounded font-label-code text-label-code">
+                    Dispute Log
+                  </button>
+<button class="bg-error-container hover:bg-on-error text-on-error-container px-space-sm py-1 rounded font-label-code text-label-code font-bold">
+                    Reject Slip
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination & Bulk Match Footer -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-body-sm text-body-sm text-secondary">Showing 1-4 of 114 proofs recorded in Shift #2</span>
+<span class="font-label-code text-label-code bg-surface-container px-space-xs py-0.5 rounded text-tertiary">All Lines Auto-Sync Active</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="bg-surface-container hover:bg-surface-container-high px-space-sm py-1 rounded font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span> Prev
+            </button>
+<span class="px-space-sm py-1 bg-primary-container text-on-primary-container font-label-code text-label-code rounded">Page 1</span>
+<button class="bg-surface-container hover:bg-surface-container-high px-space-sm py-1 rounded font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+              Next <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Active Inspection Modal Preview / Drawer (4 of 12) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md sticky top-20">
+<div class="bg-surface-container-low rounded-xl shadow-xl flex flex-col overflow-hidden">
+<!-- Inspector Header -->
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">csv</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Inspection Vault Preview</h3>
+<span class="font-label-code text-label-code text-secondary">LIVE OCR EXTRACTION &amp; MATCH</span>
+</div>
+</div>
+<span class="bg-tertiary-container/30 text-tertiary font-label-code text-label-code px-space-xs py-0.5 rounded uppercase">
+              Confidence 99.4%
+            </span>
+</div>
+<!-- Zoomed-in Screenshot Container with OCR bounding boxes -->
+<div class="relative bg-surface-container-lowest p-space-sm flex flex-col items-center">
+<div class="relative w-full rounded-lg overflow-hidden bg-surface-container group">
+<img class="w-full h-80 object-cover object-top" data-alt="High resolution smartphone screen capture of a Vodafone Cash transfer confirmation ticket showing bold red and white banner, exact arabic numerals, transaction hash, and merchant confirmation stamp" id="inspector-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw2MCzdFrdc0mz2EaPubETAQEXF36jEHwD_rXrtGnHtaA-2SueOJMLwYGTY_MlEgpPegU92bOr2EROerUJas9sHnym45wEGZ5VewmGqS2Q6nquE2-NKUspVjz4uLVW_LCB782PwsysTFpswR9_BT75zSvSMYXCbBg9rAeSeGnJiTTxXckozpSR_mAX4cc4GOBT5gdazYs8mUm45juZBO2TZIXq-uw9eE6O8UPpMCsT"/>
+<!-- Floating Simulated OCR Bounding Boxes -->
+<div class="absolute top-10 left-6 right-6 bg-primary-container/20 ring-1 ring-primary p-2 rounded backdrop-blur-[2px]">
+<div class="flex justify-between items-center text-on-surface">
+<span class="font-label-code text-label-code bg-primary-container text-on-primary-container px-1 rounded">AMOUNT (المبلغ)</span>
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">2,500.00 EGP</span>
+</div>
+</div>
+<div class="absolute top-28 left-6 right-6 bg-tertiary-container/20 ring-1 ring-tertiary p-1.5 rounded backdrop-blur-[2px]">
+<div class="flex justify-between items-center text-on-surface">
+<span class="font-label-code text-label-code bg-tertiary text-on-tertiary px-1 rounded">MSISDN</span>
+<span class="font-label-code text-label-code font-bold font-mono">01004561234</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6 bg-surface-container-highest/60 ring-1 ring-secondary p-1.5 rounded backdrop-blur-[2px]">
+<div class="flex justify-between items-center text-on-surface">
+<span class="font-label-code text-label-code bg-surface-container-highest text-secondary px-1 rounded">TX ID</span>
+<span class="font-label-code text-label-code font-mono text-secondary">VDF-892104928</span>
+</div>
+</div>
+<!-- Zoom control overlay -->
+<div class="absolute top-2 right-2 flex flex-col gap-1 opacity-80 group-hover:opacity-100 transition-opacity">
+<button class="w-8 h-8 rounded bg-surface-container-lowest/80 text-on-surface flex items-center justify-center hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container-lowest/80 text-on-surface flex items-center justify-center hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">zoom_out</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container-lowest/80 text-on-surface flex items-center justify-center hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">crop_free</span>
+</button>
+</div>
+</div>
+<!-- OCR Metadata Details Card -->
+<div class="w-full mt-space-sm p-space-sm bg-surface-container rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-code text-label-code text-secondary uppercase">Field Extraction</span>
+<span class="font-label-code text-label-code text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> Instant Parsed
+                </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col">
+<span class="font-body-sm text-body-sm text-secondary">Transaction Code</span>
+<span class="font-label-code text-label-code text-on-surface font-mono" id="inspector-tx">#VDF-892104928</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col">
+<span class="font-body-sm text-body-sm text-secondary">Timestamp (التاريخ)</span>
+<span class="font-label-code text-label-code text-on-surface" id="inspector-time">24-10 14:28:10</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col">
+<span class="font-body-sm text-body-sm text-secondary">Customer Sender</span>
+<span class="font-label-code text-label-code text-on-surface font-mono" id="inspector-sender">01004561234</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col">
+<span class="font-body-sm text-body-sm text-secondary">Detected Target</span>
+<span class="font-label-code text-label-code text-primary font-mono" id="inspector-line">Line 02 (01099221144)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Cashier Reconciliation Confirmation Action -->
+<div class="p-space-md bg-surface-container flex flex-col gap-space-md">
+<label class="flex items-start gap-space-sm cursor-pointer p-space-sm bg-surface-container-lowest rounded-lg hover:bg-surface-container-high transition-colors">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-on-surface">Confirmed cash collected in register drawer</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">تم التأكد من استلام النقدية الفعلية ومطابقتها لخزينة الدرج</span>
+</div>
+</label>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-body-sm text-body-sm text-secondary">
+<span>Matched Sim Line Balance:</span>
+<span class="font-mono text-on-surface font-bold">Line 02: 44,200 EGP</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[65%]"></div>
+</div>
+</div>
+<!-- Action Buttons Primary / Secondary -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-space-sm px-space-md bg-primary-container hover:bg-on-primary-fixed-variant text-white rounded font-headline-sm text-headline-sm flex items-center justify-center gap-space-sm shadow-md transition-all active:translate-y-0.5">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span>Commit &amp; Reconcile Proof [ENTER]</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-2 px-space-sm bg-surface-container-highest hover:bg-surface-variant text-on-surface rounded font-body-sm text-body-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">print</span> Print Slip
+                </button>
+<button class="py-2 px-space-sm bg-error-container/30 hover:bg-error-container text-error rounded font-body-sm text-body-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">close</span> Reject Proof
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- 18 Lines Quick Health Ticker for Proof Vault -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary uppercase">Active Line Nodes (18 Wallets)</span>
+<span class="font-label-code text-label-code text-tertiary">All Connected</span>
+</div>
+<div class="grid grid-cols-6 gap-1">
+<div class="bg-tertiary-container/30 text-tertiary p-1 rounded text-center font-label-code text-label-code" title="Line 01: 98% Proof Match">L01</div>
+<div class="bg-primary-container text-on-primary-container p-1 rounded text-center font-label-code text-label-code font-bold ring-1 ring-primary" title="Line 02: Active Inspected">L02</div>
+<div class="bg-tertiary-container/30 text-tertiary p-1 rounded text-center font-label-code text-label-code" title="Line 03: 100% Proof Match">L03</div>
+<div class="bg-tertiary-container/30 text-tertiary p-1 rounded text-center font-label-code text-label-code" title="Line 04: 100% Proof Match">L04</div>
+<div class="bg-surface-container-highest text-primary-fixed-dim p-1 rounded text-center font-label-code text-label-code" title="Line 05: 1 Pending Proof">L05</div>
+<div class="bg-tertiary-container/30 text-tertiary p-1 rounded text-center font-label-code text-label-code" title="Line 06: 100% Proof Match">L06</div>
+<div class="bg-tertiary-container/30 text-tertiary p-1 rounded text-center font-label-code text-label-code" title="Line 07: 100% Proof Match">L07</div>
+<div class="bg-error-container/40 text-error p-1 rounded text-center font-label-code text-label-code font-bold" title="Line 08: 1 Flagged Slip">L08</div>
+<div class="bg-tertiary-container/30 text-tertiary p-1 rounded text-center font-label-code text-label-code" title="Line 09: 100% Proof Match">L09</div>
+<div class="bg-tertiary-container/30 text-tertiary p-1 rounded text-center font-label-code text-label-code" title="Line 10: 100% Proof Match">L10</div>
+<div class="bg-tertiary-container/30 text-tertiary p-1 rounded text-center font-label-code text-label-code" title="Line 11: 100% Proof Match">L11</div>
+<div class="bg-tertiary-container/30 text-tertiary p-1 rounded text-center font-label-code text-label-code" title="Line 12: 100% Proof Match">L12</div>
+</div>
+<span class="font-body-sm text-body-sm text-secondary text-right" dir="rtl">اضغط على أي خط لفلترة إيصالاته المستلمة</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function selectAuditItem(id) {
+    const cards = document.querySelectorAll('.proof-card');
+    cards.forEach(card => card.classList.remove('ring-1', 'ring-primary/40', 'bg-surface-container/70'));
+    
+    if (cards[id - 1]) {
+      cards[id - 1].classList.add('ring-1', 'ring-primary/40', 'bg-surface-container/70');
+    }
+
+    const txCode = document.getElementById('inspector-tx');
+    const timeCode = document.getElementById('inspector-time');
+    const senderCode = document.getElementById('inspector-sender');
+    const lineCode = document.getElementById('inspector-line');
+
+    if (id === 1) {
+      txCode.innerText = '#VDF-892104928';
+      timeCode.innerText = '24-10 14:28:10';
+      senderCode.innerText = '01004561234';
+      lineCode.innerText = 'Line 02 (01099221144)';
+    } else if (id === 2) {
+      txCode.innerText = '#TX-81729011';
+      timeCode.innerText = '24-10 14:15:32';
+      senderCode.innerText = '01091238944';
+      lineCode.innerText = 'Line 05 (01066554433)';
+    } else if (id === 3) {
+      txCode.innerText = '#TX-55419200';
+      timeCode.innerText = '24-10 13:50:04';
+      senderCode.innerText = '01023847590';
+      lineCode.innerText = 'Line 01 (01019283741)';
+    } else if (id === 4) {
+      txCode.innerText = '#TX-78192004';
+      timeCode.innerText = '24-10 12:30:19';
+      senderCode.innerText = '01044332211';
+      lineCode.innerText = 'Line 08 (01044332211)';
+    }
+  }
+
+  // Keyboard shortcut listener for fast cashier workflow
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'F4') {
+      e.preventDefault();
+      const input = document.getElementById('proof-file-input');
+      if (input) input.click();
+    }
+  });
+</script></main></div></body></html>

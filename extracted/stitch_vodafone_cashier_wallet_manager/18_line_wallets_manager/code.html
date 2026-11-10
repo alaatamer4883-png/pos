@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,600;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed-dim":"#ffb4a8","on-surface-variant":"#e7bdb6","tertiary-container":"#006e4b","surface-container":"#1e1f26","background":"#111319","on-tertiary-fixed-variant":"#005236","outline":"#ae8882","error":"#ffb4ab","secondary-fixed-dim":"#c3c6d1","on-secondary-fixed":"#181c24","on-error":"#690005","tertiary-fixed":"#6ffbbe","surface-container-highest":"#33343b","on-tertiary-container":"#67f4b7","on-primary-container":"#ffd1ca","on-tertiary":"#003824","surface-variant":"#33343b","surface-tint":"#ffb4a8","inverse-surface":"#e2e2eb","primary-fixed":"#ffdad4","on-primary-fixed":"#410000","on-secondary":"#2c3039","outline-variant":"#5d3f3b","on-secondary-fixed-variant":"#434750","surface-bright":"#373940","on-tertiary-fixed":"#002113","inverse-primary":"#c00000","primary":"#ffb4a8","surface-container-lowest":"#0c0e14","on-background":"#e2e2eb","on-primary":"#690000","secondary-fixed":"#dfe2ed","tertiary-fixed-dim":"#4edea3","on-surface":"#e2e2eb","surface-container-high":"#282a30","inverse-on-surface":"#2e3037","on-secondary-container":"#b5b8c3","on-primary-fixed-variant":"#930000","surface-container-low":"#191b22","on-error-container":"#ffdad6","tertiary":"#4edea3","primary-container":"#c40000","secondary":"#c3c6d1","error-container":"#93000a","secondary-container":"#454952","surface":"#111319","surface-dim":"#111319"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1rem","margin-mobile":"1rem","space-xs":"0.25rem","gutter-compact":"0.75rem","space-xl":"2rem","margin":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-lg":"1.5rem"},"fontFamily":{"body-lg":["Manrope"],"headline-md":["Hanken Grotesk"],"label-code":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-numeric":["Hanken Grotesk"],"display-lg":["Hanken Grotesk"],"display-lg-mobile":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"],"body-sm":["Manrope"],"body-md":["Manrope"]},"fontSize":{"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"500"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"label-code":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-numeric":["1.125rem",{"lineHeight":"1.25rem","letterSpacing":"0.02em","fontWeight":"700"}],"display-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"display-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div><span class="font-label-code text-label-code uppercase tracking-wider text-tertiary">18 Nodes Operational</span></div><span class="font-label-code text-label-code text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded-lg">v2.4 POS</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-headline-sm text-headline-sm">Dashboard</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">نظرة عامة</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="todays-sales" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-headline-sm text-headline-sm">Today's Sales</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">مبيعات اليوم</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="18-line-wallets-manager" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">sim_card_download</span><span class="font-headline-sm text-headline-sm">18 Wallets</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">إدارة الـ 18 خط</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="qr-and-barcode-scanner" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">qr_code_scanner</span><span class="font-headline-sm text-headline-sm">Scanner</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">المسح الضوئي</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="screenshots-and-proof-vault" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-headline-sm text-headline-sm">Proof Vault</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">الاسكرينات</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="drawer-reconciliation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">calculate</span><span class="font-headline-sm text-headline-sm">Drawer Closing</span></div><span class="font-body-sm text-body-sm opacity-70" dir="rtl">تقفيل الدرج</span></a></nav></div><div class="px-space-md flex flex-col gap-space-sm"><div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-code text-label-code text-secondary">CASH POOL LIMIT</span><span class="font-label-numeric text-label-numeric text-on-surface">74%</span></div><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-[74%]"></div></div><div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant"><span>18 Lines Float</span><span>EGP 360K</span></div></div><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="font-label-code text-label-code">POS-TRM-04</span></div><a class="text-on-surface-variant hover:text-on-surface" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-low/95 backdrop-blur-md z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Vodafone Cash Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQirkeHe2-RNVwQfG8p33WlAz_txKaPv7eeU05_v6IbvcV7G57yj_0lq2KchrK0TtCEUI65wL-EawbgUKlBQxtRNdiA3ODkkY4jRh7XdFBflQMC_nu6OCtp7WoWGkgc-UQknbzIb4fy6lyHOaGbxzOJYHP52XiRxK6K-Z57aaoxKZx4lUYdBZHWKZ-49wlxVFOR3ci6tWX5bzwyFl09MFTwk_9qotd0UPp2sQrZ5WT"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Vodafone Cash</span><span class="font-label-code text-label-code text-primary leading-tight">Agent Multi-Line POS</span></div></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-tertiary-container/30 px-space-sm py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-code text-label-code text-on-tertiary-container uppercase tracking-wide">Shift Open</span></div><div class="flex flex-col"><span class="font-label-code text-label-code text-secondary uppercase">Drawer Balance (رصيد الخزينة)</span><span class="font-label-numeric text-label-numeric text-on-surface">24,850.00 <span class="font-body-sm text-body-sm text-tertiary">EGP</span></span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container px-space-sm py-1.5 rounded-lg w-64 gap-space-xs"><span class="material-symbols-outlined text-[18px] text-outline">search</span><span class="font-body-sm text-body-sm text-outline">Search MSISDN / 010...</span></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex flex-col items-end"><span class="font-label-numeric text-label-numeric text-on-surface">14:32:08</span><span class="font-label-code text-label-code text-secondary">24 OCT 2024</span></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col items-end"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Ahmed Mansour</span><span class="font-label-code text-label-code text-on-surface-variant leading-tight">Shift #2 • Teller (كاشير)</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASb6exdMbbj11Na0GZ-QpseoHTFnIGcPG6rnEb9wdZT1SF4OaFHE81YGr68kskUceOx_ihtHYg79Ih04Wq0GquorEVx6HlwR-gBrIZ6-9UAssjpqAh9BTp0BmO4WFA8Sgr6KzS24EFHYGYEfanG_2-oautTva7R3_9MezJQMVpRv7auQOdbcbYQKmoGMLBtaOvDTyjItvi91AIH1TN7FJxP25NviavJBbR45Fl0hgY"/></div></div></header><main class="relative pt-16 w-full bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-margin flex flex-col gap-space-lg">
+<!-- Top Summary & Control Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">sim_card_download</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface">18 Multi-SIM Terminal Matrix</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" dir="rtl">(إدارة المحافظ الـ 18 والمراقبة اللحظية)</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">
+            Simultaneous multi-line routing engine • Active pool aggregated float: <strong class="text-tertiary font-label-numeric text-label-numeric">348,220.00 EGP</strong>
+</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-code text-label-code text-tertiary uppercase">16 Active</span>
+<span class="text-secondary font-label-code text-label-code">/</span>
+<span class="font-label-code text-label-code text-outline uppercase">2 Cooldown</span>
+</div>
+<button class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-1.5 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span class="font-body-sm text-body-sm">Sync Balances</span>
+<span class="font-label-code text-label-code text-secondary">[F5]</span>
+</button>
+<button class="flex items-center gap-space-xs bg-primary-container hover:bg-inverse-primary text-on-primary font-headline-sm text-body-md px-space-md py-1.5 rounded-lg transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Register SIM 19</span>
+</button>
+</div>
+</div>
+<!-- Main Split-Screen Workspace (12-column Grid) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT MASTER LINE NAVIGATOR (Columns 1 to 4) -->
+<div class="xl:col-span-4 bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-sm">
+<!-- Filter and Search Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Line Selector</span>
+<span class="font-label-code text-label-code text-secondary">18 NODES AVAILABLE</span>
+</div>
+<div class="flex items-center bg-surface-container px-space-sm py-1.5 rounded-lg gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline">search</span>
+<input class="w-full bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none" placeholder="Filter by line #, MSISDN, tag..." type="text"/>
+<span class="font-label-code text-label-code text-outline">/</span>
+</div>
+<!-- Quick Filters -->
+<div class="flex items-center gap-space-xs pt-space-xs overflow-x-auto pb-1">
+<button class="bg-surface-container-highest text-on-surface font-label-code text-label-code px-space-sm py-0.5 rounded">ALL (18)</button>
+<button class="bg-surface-container text-on-surface-variant hover:text-on-surface font-label-code text-label-code px-space-sm py-0.5 rounded">HIGH QUOTA (9)</button>
+<button class="bg-surface-container text-on-surface-variant hover:text-on-surface font-label-code text-label-code px-space-sm py-0.5 rounded">NEAR LIMIT (3)</button>
+<button class="bg-surface-container text-on-surface-variant hover:text-on-surface font-label-code text-label-code px-space-sm py-0.5 rounded">IDLE (6)</button>
+</div>
+</div>
+<!-- 18 Lines Vertical Scroll List -->
+<div class="flex flex-col gap-space-xs max-h-[820px] overflow-y-auto pr-1">
+<!-- Line 01 -->
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 01</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">رئيسي كاش 01</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">22,340 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 9123 8475</span>
+<span class="text-tertiary">Quota: 8.5K left</span>
+</div>
+</div>
+<!-- Line 02 -->
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 02</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">تحويلات تجار</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">14,200 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 3349 9912</span>
+<span class="text-tertiary">Quota: 12.0K left</span>
+</div>
+</div>
+<!-- Line 03 -->
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 03</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">كاش فوري وايداع</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">3,450 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 8872 1019</span>
+<span class="text-primary">Low Float</span>
+</div>
+</div>
+<!-- Line 04 -->
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 04</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">سحب عملاء صالة</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">19,890 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 6112 4004</span>
+<span class="text-tertiary">Quota: 4.1K left</span>
+</div>
+</div>
+<!-- Line 05 -->
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 05</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">موزع فرعي المعادي</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">28,900 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 9940 3381</span>
+<span class="text-primary-fixed-dim">Quota: 1.1K left</span>
+</div>
+</div>
+<!-- Line 06 -->
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 06</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">شحن أرصدة بالجملة</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">16,100 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 1209 8831</span>
+<span class="text-tertiary">Quota: 9.0K left</span>
+</div>
+</div>
+<!-- Line 07 (ACTIVE SELECTED LINE) -->
+<div class="p-space-sm rounded-lg bg-surface-container-high relative cursor-pointer shadow-md transition-all flex flex-col gap-space-xs">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container rounded-l"></div>
+<div class="flex items-center justify-between pl-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-headline-sm text-body-md text-primary font-bold">Line 07</span>
+<span class="font-body-sm text-body-sm text-on-surface" dir="rtl">سحب سريع تجزئة</span>
+<span class="bg-primary-container text-on-primary font-label-code text-label-code px-1.5 py-0.5 rounded">ACTIVE</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface font-bold">18,450.00 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant pl-space-xs">
+<span class="font-bold text-on-surface">010 2456 7891</span>
+<span class="text-primary-fixed-dim bg-error-container/40 px-1 rounded">Quota 82% used</span>
+</div>
+</div>
+<!-- Line 08 -->
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 08</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">احتياطي خزانة 1</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">25,000 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 5510 9942</span>
+<span class="text-tertiary">Quota: 18.2K left</span>
+</div>
+</div>
+<!-- Line 09 -->
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 09</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">فواتير وشركات</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">8,950 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 7712 3410</span>
+<span class="text-secondary">Quota: 21.0K left</span>
+</div>
+</div>
+<!-- Line 10 to 18 condensed view -->
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 10</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">كاش كاونتر 2</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">19,400 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 9801 2234</span>
+<span class="text-tertiary">Quota: 7.2K left</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 11</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">كاش شباك 3</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">11,700 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 4421 8976</span>
+<span class="text-tertiary">Quota: 14.5K left</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 12</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">تحويلات VIP</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">29,400 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 6634 1109</span>
+<span class="text-primary-fixed-dim">Quota: 600 EGP left</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 13</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">خط صيانة مؤقت</span>
+</div>
+<span class="font-label-numeric text-body-md text-error">0.00 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>010 0019 7723</span>
+<span class="text-error uppercase">Paused SIM</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container/60 hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-body-md text-on-surface">Line 14-18</span>
+<span class="font-body-sm text-body-sm text-secondary" dir="rtl">مجمع خطوط المبيعات 14-18</span>
+</div>
+<span class="font-label-numeric text-body-md text-on-surface">148,890 EGP</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>5 SIMs Grouped</span>
+<span class="text-tertiary">All Ready</span>
+</div>
+</div>
+</div>
+<!-- Terminal Quick Diagnostic Bar -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">cell_tower</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Vodafone 4G Core Link</span>
+</div>
+<span class="font-label-code text-label-code text-tertiary">LATENCY: 24ms</span>
+</div>
+</div>
+<!-- RIGHT PANE: COMPREHENSIVE ISOLATED PROFILE FOR LINE 07 (Columns 5 to 12) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Profile Primary Header Banner -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-44 h-44 rounded-full bg-primary-container/10 pointer-events-none blur-xl"></div>
+<div class="flex flex-wrap items-start justify-between gap-space-md z-10">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-primary-container flex items-center justify-center text-on-primary font-display-lg text-headline-lg shadow-md shrink-0">
+                07
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-display-lg text-headline-lg text-on-surface font-bold tracking-tight">Line 07: 01024567891</span>
+<button class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high px-space-sm py-1 rounded-lg text-on-surface transition-colors cursor-pointer" id="copyBtn" onclick="copyNumber()" title="Copy Number">
+<span class="material-symbols-outlined text-[16px] text-primary">content_copy</span>
+<span class="font-label-code text-label-code uppercase" id="copyText">Copy MSISDN</span>
+</button>
+<span class="bg-tertiary-container/40 text-on-tertiary-container font-label-code text-label-code px-space-sm py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    ACTIVE 4G • Device #3 POS
+                  </span>
+</div>
+<div class="flex items-center gap-space-md pt-1 flex-wrap">
+<span class="font-body-md text-body-md text-on-surface-variant" dir="rtl">سحب سريع تجزئة (Fast Counter Cash-Out)</span>
+<span class="text-secondary font-label-code text-label-code">•</span>
+<span class="font-label-code text-label-code text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                    Daily limit resets in 06:14:22 (باقي 6 ساعات للتجديد)
+                  </span>
+</div>
+</div>
+</div>
+<!-- Quick Profile Controls -->
+<div class="flex items-center gap-space-xs z-10">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-space-sm py-2 rounded-lg font-headline-sm text-body-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Audit</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-space-sm py-2 rounded-lg font-headline-sm text-body-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">sim_card</span>
+<span>USSD Code</span>
+</button>
+<button class="bg-error-container/30 hover:bg-error-container text-on-error-container hover:text-white px-space-sm py-2 rounded-lg font-headline-sm text-body-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+<span>Pause Line</span>
+</button>
+</div>
+</div>
+<!-- Balance & Limits Metric Tiles -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md pt-space-xs z-10">
+<!-- Current Balance Tile -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary uppercase">Available Float</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-on-surface font-bold">18,450.00</span>
+<span class="font-body-sm text-body-sm text-tertiary">EGP • رصيد المحفظة الحالي</span>
+</div>
+<button class="mt-space-xs w-full bg-primary-container hover:bg-inverse-primary text-on-primary py-1.5 rounded font-headline-sm text-body-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">add_card</span>
+<span>Deposit / Refill</span>
+</button>
+</div>
+<!-- Daily Transfer Limit Gauge -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary uppercase">Daily Send Limit</span>
+<span class="font-label-numeric text-body-sm text-primary-fixed-dim">82% Used</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<span class="font-label-numeric text-headline-md text-on-surface">24,600</span>
+<span class="font-label-code text-label-code text-on-surface-variant">/ 30,000 EGP</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[82%]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Remaining:</span>
+<span class="text-tertiary font-bold">5,400.00 EGP</span>
+</div>
+</div>
+<!-- Monthly Transfer Limit Gauge -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary uppercase">Monthly Send Limit</span>
+<span class="font-label-numeric text-body-sm text-on-surface">85% Used</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<span class="font-label-numeric text-headline-md text-on-surface">85,200</span>
+<span class="font-label-code text-label-code text-on-surface-variant">/ 100,000 EGP</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[85%]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Remaining:</span>
+<span class="text-secondary font-bold">14,800.00 EGP</span>
+</div>
+</div>
+<!-- Daily Receive Limit Gauge & Alert -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary uppercase">Daily Receive (استقبال)</span>
+<span class="material-symbols-outlined text-primary text-[20px]">warning</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<span class="font-label-numeric text-headline-md text-error">29,100</span>
+<span class="font-label-code text-label-code text-on-surface-variant">/ 30,000 EGP</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full w-[97%] animate-pulse"></div>
+</div>
+</div>
+<div class="bg-error-container/40 text-on-error-container p-1 rounded font-body-sm text-[11px] text-center" dir="rtl">
+                قريب جداً من الحد الأقصى للاستقبال
+              </div>
+</div>
+</div>
+</div>
+<!-- Quick Line Operations & Transfer Module -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Dispatch Transfer from Line 07 -->
+<div class="lg:col-span-8 bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">send_money</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Send from Line 07</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" dir="rtl">(إرسال مباشر من هذا الخط)</span>
+</div>
+<span class="font-label-code text-label-code text-tertiary">AVAILABLE: 18,450 EGP</span>
+</div>
+<form class="flex flex-col gap-space-sm" id="transferForm" onsubmit="event.preventDefault(); triggerSimulation();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Recipient MSISDN -->
+<div class="flex flex-col gap-1">
+<label class="font-label-code text-label-code text-secondary uppercase">Recipient Mobile (رقم المستلم)</label>
+<div class="flex items-center bg-surface-container px-space-sm py-2 rounded-lg gap-space-xs focus-within:ring-1 focus-within:ring-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">contact_phone</span>
+<input class="w-full bg-transparent text-on-surface font-label-numeric text-body-lg focus:outline-none" placeholder="010 / 011 / 012 / 015..." required="" type="tel" value="01098765432"/>
+</div>
+</div>
+<!-- Amount in EGP -->
+<div class="flex flex-col gap-1">
+<label class="font-label-code text-label-code text-secondary uppercase">Amount to Transfer (المبلغ بالجنيه)</label>
+<div class="flex items-center bg-surface-container px-space-sm py-2 rounded-lg gap-space-xs focus-within:ring-1 focus-within:ring-primary">
+<span class="font-label-code text-label-code text-primary font-bold">EGP</span>
+<input class="w-full bg-transparent text-on-surface font-label-numeric text-body-lg focus:outline-none" max="5400" placeholder="0.00" required="" type="number" value="1500"/>
+</div>
+</div>
+</div>
+<!-- Quick presets & PIN verification -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center pt-space-xs">
+<div class="md:col-span-7 flex items-center gap-space-xs flex-wrap">
+<span class="font-body-sm text-body-sm text-secondary">Presets:</span>
+<button class="bg-surface-container hover:bg-surface-container-high px-space-sm py-1 rounded font-label-numeric text-body-sm text-on-surface" type="button">500</button>
+<button class="bg-surface-container hover:bg-surface-container-high px-space-sm py-1 rounded font-label-numeric text-body-sm text-on-surface" type="button">1,000</button>
+<button class="bg-surface-container hover:bg-surface-container-high px-space-sm py-1 rounded font-label-numeric text-body-sm text-on-surface" type="button">2,500</button>
+<button class="bg-surface-container hover:bg-surface-container-high px-space-sm py-1 rounded font-label-numeric text-body-sm text-on-surface" type="button">5,000</button>
+</div>
+<!-- PIN Verification -->
+<div class="md:col-span-5 flex items-center bg-surface-container px-space-sm py-1.5 rounded-lg gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">pin</span>
+<input class="w-full bg-transparent text-on-surface font-label-numeric text-body-sm focus:outline-none tracking-widest" maxlength="6" placeholder="Wallet PIN (الرقم السري)" type="password" value="••••••"/>
+</div>
+</div>
+<!-- Submit & Confirmation Action -->
+<div class="flex items-center justify-between pt-space-xs border-t border-surface-container-highest/50">
+<div class="flex items-center gap-space-xs text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+<span>Direct SIM GSM Session • Auto SMS confirmation</span>
+</div>
+<button class="bg-primary-container hover:bg-inverse-primary text-on-primary font-headline-sm text-body-md px-space-lg py-2 rounded-lg flex items-center gap-space-xs transition-transform active:scale-95 shadow-md" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Confirm &amp; Send 1,500 EGP</span>
+<span class="font-label-code text-label-code opacity-80">[ENTER]</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Line Cooldown & Operational Health Widget -->
+<div class="lg:col-span-4 bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Line Controls</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Manage cooldown period, USSD buffer and automated fallbacks.</span>
+</div>
+<!-- Health Indicator Mini-Bars -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-sm rounded-lg">
+<div class="flex items-center justify-between font-label-code text-label-code">
+<span class="text-secondary">SIM Response Rate</span>
+<span class="text-tertiary">99.8% (Fast)</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code">
+<span class="text-secondary">Terminal Modem</span>
+<span class="text-on-surface">Huawei ME909s Slot 7</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-label-code">
+<span class="text-secondary">Pending Queued Tx</span>
+<span class="text-on-surface">0 (Idle)</span>
+</div>
+</div>
+<!-- Cooldown Toggle Box -->
+<div class="flex items-center justify-between bg-surface-container p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm text-on-surface">Temporary Cooldown</span>
+<span class="font-body-sm text-[11px] text-secondary" dir="rtl">تجميد الخط للاستقبال فقط</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<button class="w-full bg-surface-container hover:bg-surface-container-high text-on-surface py-2 rounded-lg font-headline-sm text-body-sm flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">sim_card_alert</span>
+<span>Test USSD *9*7#</span>
+</button>
+</div>
+</div>
+<!-- Dedicated Transaction History Table for Line 07 Only -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">receipt_long</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Line 07 Transaction Ledger</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" dir="rtl">(سجل معاملات الخط المنفصل)</span>
+</div>
+<!-- Ledger Filter Badges -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="bg-surface-container-highest text-on-surface px-space-sm py-1 rounded text-body-sm font-label-code text-label-code">Today (28)</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-secondary px-space-sm py-1 rounded text-body-sm font-label-code text-label-code">Cash In (وارد)</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-secondary px-space-sm py-1 rounded text-body-sm font-label-code text-label-code">Cash Out (صادر)</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-secondary px-space-sm py-1 rounded text-body-sm font-label-code text-label-code flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">file_download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead class="bg-surface-container text-on-surface-variant font-label-code text-label-code uppercase tracking-wider">
+<tr>
+<th class="py-2.5 px-space-sm">Timestamp</th>
+<th class="py-2.5 px-space-sm">Ref ID</th>
+<th class="py-2.5 px-space-sm">Direction / Type</th>
+<th class="py-2.5 px-space-sm">Counterparty (الرقم)</th>
+<th class="py-2.5 px-space-sm text-right">Amount (EGP)</th>
+<th class="py-2.5 px-space-sm text-right">Balance After</th>
+<th class="py-2.5 px-space-sm text-center">Audit Slip</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/40">
+<!-- Tx 01 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface">14:28:10</td>
+<td class="py-3 px-space-sm font-label-code text-label-code text-secondary">VF-9021831</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 bg-tertiary-container/30 text-on-tertiary-container px-2 py-0.5 rounded font-label-code text-label-code">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+                      Cash In (إيداع وارد)
+                    </span>
+</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface font-semibold">010 3381 9022</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-md text-tertiary text-right font-bold">+2,400.00</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface-variant text-right">18,450.00</td>
+<td class="py-3 px-space-sm text-center">
+<button class="text-primary hover:text-on-surface transition-colors p-1" title="View Proof Slip">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Tx 02 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface">14:12:44</td>
+<td class="py-3 px-space-sm font-label-code text-label-code text-secondary">VF-9021799</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 bg-error-container/40 text-on-error-container px-2 py-0.5 rounded font-label-code text-label-code">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+                      Cash Out (سحب صادر)
+                    </span>
+</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface font-semibold">010 9941 2280</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-md text-primary-fixed-dim text-right font-bold">-4,000.00</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface-variant text-right">16,050.00</td>
+<td class="py-3 px-space-sm text-center">
+<button class="text-primary hover:text-on-surface transition-colors p-1" title="View Proof Slip">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Tx 03 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface">13:50:18</td>
+<td class="py-3 px-space-sm font-label-code text-label-code text-secondary">VF-9021640</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 bg-error-container/40 text-on-error-container px-2 py-0.5 rounded font-label-code text-label-code">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+                      Cash Out (سحب صادر)
+                    </span>
+</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface font-semibold">010 1190 4455</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-md text-primary-fixed-dim text-right font-bold">-1,500.00</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface-variant text-right">20,050.00</td>
+<td class="py-3 px-space-sm text-center">
+<button class="text-primary hover:text-on-surface transition-colors p-1" title="View Proof Slip">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Tx 04 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface">13:31:02</td>
+<td class="py-3 px-space-sm font-label-code text-label-code text-secondary">VF-9021502</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 bg-tertiary-container/30 text-on-tertiary-container px-2 py-0.5 rounded font-label-code text-label-code">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+                      Cash In (إيداع وارد)
+                    </span>
+</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface font-semibold">010 4721 9901</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-md text-tertiary text-right font-bold">+5,000.00</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface-variant text-right">21,550.00</td>
+<td class="py-3 px-space-sm text-center">
+<button class="text-primary hover:text-on-surface transition-colors p-1" title="View Proof Slip">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Tx 05 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface">12:45:19</td>
+<td class="py-3 px-space-sm font-label-code text-label-code text-secondary">VF-9021319</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 bg-error-container/40 text-on-error-container px-2 py-0.5 rounded font-label-code text-label-code">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+                      Cash Out (سحب صادر)
+                    </span>
+</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface font-semibold">010 6554 1209</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-md text-primary-fixed-dim text-right font-bold">-3,100.00</td>
+<td class="py-3 px-space-sm font-label-numeric text-body-sm text-on-surface-variant text-right">16,550.00</td>
+<td class="py-3 px-space-sm text-center">
+<button class="text-primary hover:text-on-surface transition-colors p-1" title="View Proof Slip">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Micro Status Bar -->
+<div class="flex items-center justify-between pt-space-xs text-secondary font-label-code text-label-code">
+<span>Showing recent 5 of 28 transactions for Line 07</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2 py-0.5 bg-surface-container rounded hover:text-on-surface">← Prev</button>
+<span class="text-on-surface">Page 1 / 6</span>
+<button class="px-2 py-0.5 bg-surface-container rounded hover:text-on-surface">Next →</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function copyNumber() {
+    const msisdn = "01024567891";
+    navigator.clipboard.writeText(msisdn).then(() => {
+      const copyText = document.getElementById("copyText");
+      if (copyText) {
+        copyText.innerText = "COPIED!";
+        setTimeout(() => {
+          copyText.innerText = "Copy MSISDN";
+        }, 2000);
+      }
+    });
+  }
+
+  function triggerSimulation() {
+    alert("Simulation: Outgoing transfer of 1,500.00 EGP initiated from Line 07 (01024567891) via POS SIM module.");
+  }
+</script></main></div></body></html>

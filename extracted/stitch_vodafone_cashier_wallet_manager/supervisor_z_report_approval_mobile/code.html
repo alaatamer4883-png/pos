@@ -1,0 +1,512 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#e2e2eb", "on-tertiary": "#003824", "tertiary-fixed": "#6ffbbe", "on-secondary-container": "#b5b8c3", "on-tertiary-fixed-variant": "#005236", "inverse-surface": "#e2e2eb", "surface-container": "#1e1f26", "surface-container-low": "#191b22", "inverse-on-surface": "#2e3037", "tertiary-fixed-dim": "#4edea3", "primary-container": "#c40000", "on-primary": "#690000", "on-tertiary-container": "#67f4b7", "surface-container-highest": "#33343b", "tertiary": "#4edea3", "on-secondary-fixed-variant": "#434750", "inverse-primary": "#c00000", "surface": "#111319", "primary-fixed": "#ffdad4", "surface-container-high": "#282a30", "on-secondary-fixed": "#181c24", "error-container": "#93000a", "tertiary-container": "#006e4b", "on-tertiary-fixed": "#002113", "on-error": "#690005", "primary-fixed-dim": "#ffb4a8", "surface-tint": "#ffb4a8", "secondary-fixed": "#dfe2ed", "on-background": "#e2e2eb", "on-primary-fixed-variant": "#930000", "on-primary-fixed": "#410000", "surface-bright": "#373940", "secondary-fixed-dim": "#c3c6d1", "error": "#ffb4ab", "secondary": "#c3c6d1", "primary": "#ffb4a8", "surface-container-lowest": "#0c0e14", "background": "#111319", "surface-variant": "#33343b", "secondary-container": "#454952", "on-secondary": "#2c3039", "on-error-container": "#ffdad6", "outline": "#ae8882", "on-surface-variant": "#e7bdb6", "on-primary-container": "#ffd1ca", "outline-variant": "#5d3f3b", "surface-dim": "#111319" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xl": "2rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin": "1.5rem", "gutter": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter-compact": "0.75rem", "margin-mobile": "1rem" }, "fontFamily": { "label-code": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "label-numeric": ["Hanken Grotesk"], "display-lg": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-sm": ["Hanken Grotesk"], "body-lg": ["Manrope"], "display-lg-mobile": ["Hanken Grotesk"], "body-sm": ["Manrope"], "body-md": ["Manrope"] }, "fontSize": { "label-code": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "fontWeight": "600" }], "label-numeric": ["1.125rem", { "lineHeight": "1.25rem", "letterSpacing": "0.02em", "fontWeight": "700" }], "display-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "500" }], "display-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["0.75rem", { "lineHeight": "1rem", "fontWeight": "400" }], "body-md": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#111319;color:#e2e2eb;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-white"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.5)]"><div class="h-16 px-gutter-compact flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-2 h-7 bg-primary-container rounded-DEFAULT shrink-0"></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-code text-label-code text-on-primary-container bg-primary-container/20 px-1 py-0.5 rounded-DEFAULT uppercase tracking-wider shrink-0">VF·Z01</span><button aria-label="Switch Branch" class="flex items-center gap-space-xs text-on-surface hover:text-white transition-colors min-h-[44px] px-1"><span class="font-headline-sm text-headline-sm truncate font-semibold">Audit Feed</span><span class="material-symbols-outlined text-[18px] text-secondary shrink-0">expand_more</span></button></div></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="px-2 py-1 rounded-DEFAULT bg-surface-container-high flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-code text-label-code text-tertiary font-bold tracking-wider uppercase">AUDIT SYNC</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface px-gutter-compact"><div class="flex flex-col w-full pb-24 space-y-space-md">
+<!-- Active Shift Inspection Context Card -->
+<div class="relative overflow-hidden bg-surface-container-high rounded-lg p-space-md shadow-md">
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-code text-label-code bg-surface-container-lowest px-1.5 py-0.5 rounded-DEFAULT text-secondary-fixed">BRANCH #104</span>
+<span class="font-label-code text-label-code text-secondary">· Cairo Central Hub</span>
+<span class="font-label-code text-label-code bg-surface-container-lowest px-1.5 py-0.5 rounded-DEFAULT text-on-surface-variant font-bold">POS-TRM-04</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 truncate">
+          Ahmed Mansour <span class="font-label-code text-label-code text-secondary font-normal">(#9021)</span>
+</h2>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-primary-container/20 text-error font-label-code text-label-code animate-pulse font-bold tracking-tight">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          PENDING SIGN-OFF
+        </span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">بانتظار اعتماد المشرف</span>
+</div>
+</div>
+<!-- Shift Meta Sub-bar -->
+<div class="flex items-center justify-between pt-space-sm mt-space-xs bg-surface-container-low/60 rounded-DEFAULT px-2.5 py-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span class="font-body-sm text-body-sm">Shift #2 (14:00 - 22:00)</span>
+</div>
+<div class="flex items-center gap-1 font-label-code text-label-code text-on-surface">
+<span class="text-secondary">Closed:</span>
+<span class="text-tertiary">22:00:15</span>
+<span class="text-secondary-dim">· 24 Oct</span>
+</div>
+</div>
+</div>
+<!-- Dual Settlement Verification Metrics (Card A & Card B) -->
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Card A: Physical Drawer Audit -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm bg-surface-container-low px-space-sm py-1.5 rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-DEFAULT bg-tertiary-container/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block leading-tight">Physical Cash Drawer</span>
+<span class="font-body-sm text-body-sm text-secondary">جرد الخزينة النقدية الفعلية</span>
+</div>
+</div>
+<div class="bg-tertiary-container/40 text-tertiary px-2 py-0.5 rounded-DEFAULT flex items-center gap-1 font-label-code text-label-code">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="">100% MATCH مطابق</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center py-1">
+<div class="bg-surface-container-low rounded-DEFAULT p-2 flex flex-col justify-center">
+<span class="font-body-sm text-body-sm text-secondary truncate">Counted الفعلي</span>
+<span class="font-label-numeric text-label-numeric text-on-surface mt-0.5">26,700</span>
+<span class="font-label-code text-[10px] text-secondary">EGP</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-2 flex flex-col justify-center">
+<span class="font-body-sm text-body-sm text-secondary truncate">Expected الدفتري</span>
+<span class="font-label-numeric text-label-numeric text-on-surface mt-0.5">26,700</span>
+<span class="font-label-code text-[10px] text-secondary">EGP</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-2 flex flex-col justify-center">
+<span class="font-body-sm text-body-sm text-secondary truncate">Delta الفارق</span>
+<span class="font-label-numeric text-label-numeric text-tertiary mt-0.5">0.00</span>
+<span class="font-label-code text-[10px] text-tertiary font-bold">PERFECT</span>
+</div>
+</div>
+</div>
+<!-- Card B: 18-Line Digital Float Delta -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm bg-surface-container-low px-space-sm py-1.5 rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-DEFAULT bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block leading-tight">18-Line Digital Float</span>
+<span class="font-body-sm text-body-sm text-secondary">صافي المحافظ الرقمية الـ 18</span>
+</div>
+</div>
+<div class="bg-surface-container-high text-tertiary px-2 py-0.5 rounded-DEFAULT flex items-center gap-1 font-label-code text-label-code">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="">18/18 SYNCED متزامن</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center py-1">
+<div class="bg-surface-container-low rounded-DEFAULT p-2 flex flex-col justify-center">
+<span class="font-body-sm text-body-sm text-secondary truncate">Opening الرصيد البدائي</span>
+<span class="font-label-numeric text-label-numeric text-on-surface mt-0.5">343.3k</span>
+<span class="font-label-code text-[10px] text-secondary">EGP</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-2 flex flex-col justify-center">
+<span class="font-body-sm text-body-sm text-secondary truncate">Delta الصافي</span>
+<span class="font-label-numeric text-label-numeric text-tertiary mt-0.5">+16.7k</span>
+<span class="font-label-code text-[10px] text-tertiary font-bold">NET INFLOW</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-2 flex flex-col justify-center">
+<span class="font-body-sm text-body-sm text-secondary truncate">Closing الإجمالي</span>
+<span class="font-label-numeric text-label-numeric text-primary-fixed mt-0.5">360.0k</span>
+<span class="font-label-code text-[10px] text-secondary">EGP AGGREGATE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Inspection Sections (Accordion Group) -->
+<div class="space-y-2">
+<!-- Accordion 1: Physical Note Denominations -->
+<details class="group bg-surface-container-low rounded-lg overflow-hidden" open="">
+<summary class="flex items-center justify-between p-space-md cursor-pointer select-none bg-surface-container-high/70 hover:bg-surface-container-high transition-colors list-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">inventory</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Denomination Tally</span>
+<span class="font-body-sm text-body-sm text-secondary">جرد وتفقيط الفئات الورقية</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-on-surface font-bold bg-surface-container px-2 py-0.5 rounded-DEFAULT">26,700 EGP</span>
+<span class="material-symbols-outlined text-[18px] text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</div>
+</summary>
+<div class="p-space-md space-y-2 bg-surface-container-low">
+<div class="grid grid-cols-2 gap-2">
+<!-- 200 EGP -->
+<div class="flex items-center justify-between p-2 bg-surface-container rounded-DEFAULT">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-DEFAULT bg-surface-bright flex items-center justify-center font-label-code text-label-code text-primary font-bold">200</span>
+<span class="font-body-sm text-body-sm text-secondary">× 100 pcs</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface">20,000</span>
+</div>
+<!-- 100 EGP -->
+<div class="flex items-center justify-between p-2 bg-surface-container rounded-DEFAULT">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-DEFAULT bg-surface-bright flex items-center justify-center font-label-code text-label-code text-primary font-bold">100</span>
+<span class="font-body-sm text-body-sm text-secondary">× 50 pcs</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface">5,000</span>
+</div>
+<!-- 50 EGP -->
+<div class="flex items-center justify-between p-2 bg-surface-container rounded-DEFAULT">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-DEFAULT bg-surface-bright flex items-center justify-center font-label-code text-label-code text-primary font-bold">50</span>
+<span class="font-body-sm text-body-sm text-secondary">× 24 pcs</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface">1,200</span>
+</div>
+<!-- 20 EGP -->
+<div class="flex items-center justify-between p-2 bg-surface-container rounded-DEFAULT">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-DEFAULT bg-surface-bright flex items-center justify-center font-label-code text-label-code text-primary font-bold">20</span>
+<span class="font-body-sm text-body-sm text-secondary">× 25 pcs</span>
+</div>
+<span class="font-label-numeric text-label-numeric text-on-surface">500</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-3 py-1.5 bg-surface-container rounded-DEFAULT font-body-sm text-body-sm text-secondary">
+<span class="">Coins / Fakah (فكة معدنية)</span>
+<span class="font-label-code text-label-code text-on-surface">0.00 EGP</span>
+</div>
+</div>
+</details>
+<!-- Accordion 2: Shift Volume & Transactions -->
+<details class="group bg-surface-container-low rounded-lg overflow-hidden">
+<summary class="flex items-center justify-between p-space-md cursor-pointer select-none bg-surface-container-high/70 hover:bg-surface-container-high transition-colors list-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Volume &amp; Operations</span>
+<span class="font-body-sm text-body-sm text-secondary">حركة العمليات وعمولات الفرع</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-tertiary bg-surface-container px-2 py-0.5 rounded-DEFAULT">62 Txns</span>
+<span class="material-symbols-outlined text-[18px] text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</div>
+</summary>
+<div class="p-space-md space-y-2 bg-surface-container-low">
+<div class="grid grid-cols-2 gap-2">
+<!-- Cash In -->
+<div class="p-2.5 bg-surface-container rounded-DEFAULT">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary">إيداع Cash-In</span>
+<span class="font-label-code text-label-code text-tertiary">38 Txns</span>
+</div>
+<div class="font-label-numeric text-label-numeric text-on-surface mt-1">+48,200.00 <span class="font-body-sm text-body-sm text-secondary font-normal">EGP</span></div>
+</div>
+<!-- Cash Out -->
+<div class="p-2.5 bg-surface-container rounded-DEFAULT">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary">سحب Cash-Out</span>
+<span class="font-label-code text-label-code text-error">24 Txns</span>
+</div>
+<div class="font-label-numeric text-label-numeric text-on-surface mt-1">-31,500.00 <span class="font-body-sm text-body-sm text-secondary font-normal">EGP</span></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-2.5 bg-surface-container rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">price_check</span>
+<div>
+<span class="font-body-md text-body-md text-on-surface block">Merchant Commission</span>
+<span class="font-body-sm text-body-sm text-secondary">العمولة المحققة للفرع</span>
+</div>
+</div>
+<span class="font-label-numeric text-label-numeric text-tertiary">+1,845.00 EGP</span>
+</div>
+<!-- OCR Attachment Verification Pill -->
+<div class="flex items-center justify-between p-2.5 bg-surface-container-high rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">document_scanner</span>
+<div>
+<span class="font-body-md text-body-md text-on-surface block">Attached OCR Slips</span>
+<span class="font-body-sm text-body-sm text-secondary">الإيصالات الورقية الممسوحة</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-code text-label-code text-tertiary font-bold">114/114 MATCH</span>
+<span class="block font-body-sm text-body-sm text-secondary">0 Duplicates</span>
+</div>
+</div>
+</div>
+</details>
+<!-- Accordion 3: 18 Network SIM Lines Health Quick-Grid -->
+<details class="group bg-surface-container-low rounded-lg overflow-hidden">
+<summary class="flex items-center justify-between p-space-md cursor-pointer select-none bg-surface-container-high/70 hover:bg-surface-container-high transition-colors list-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">sim_card</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">18 Line Health Matrix</span>
+<span class="font-body-sm text-body-sm text-secondary">حالة أرصدة محافظ الـ 18 خطاً</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-tertiary bg-surface-container px-2 py-0.5 rounded-DEFAULT">ALL ACTIVE</span>
+<span class="material-symbols-outlined text-[18px] text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</div>
+</summary>
+<div class="p-space-md bg-surface-container-low space-y-2">
+<!-- 6x3 Compact Grid representation -->
+<div class="grid grid-cols-3 gap-1.5 font-label-code text-label-code">
+<!-- SIM 01 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 01</span>
+<span class="text-on-surface">20.4k</span>
+</div>
+<!-- SIM 02 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 02</span>
+<span class="text-on-surface">18.9k</span>
+</div>
+<!-- SIM 03 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 03</span>
+<span class="text-on-surface">24.1k</span>
+</div>
+<!-- SIM 04 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 04</span>
+<span class="text-on-surface">19.0k</span>
+</div>
+<!-- SIM 05 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 05</span>
+<span class="text-on-surface">21.5k</span>
+</div>
+<!-- SIM 06 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 06</span>
+<span class="text-on-surface">17.8k</span>
+</div>
+<!-- SIM 07 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 07</span>
+<span class="text-on-surface">22.0k</span>
+</div>
+<!-- SIM 08 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 08</span>
+<span class="text-on-surface">20.1k</span>
+</div>
+<!-- SIM 09 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 09</span>
+<span class="text-on-surface">19.8k</span>
+</div>
+<!-- SIM 10 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 10</span>
+<span class="text-on-surface">23.2k</span>
+</div>
+<!-- SIM 11 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 11</span>
+<span class="text-on-surface">18.4k</span>
+</div>
+<!-- SIM 12 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 12</span>
+<span class="text-on-surface">20.0k</span>
+</div>
+<!-- SIM 13 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 13</span>
+<span class="text-on-surface">19.5k</span>
+</div>
+<!-- SIM 14 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 14</span>
+<span class="text-on-surface">21.0k</span>
+</div>
+<!-- SIM 15 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 15</span>
+<span class="text-on-surface">18.7k</span>
+</div>
+<!-- SIM 16 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 16</span>
+<span class="text-on-surface">22.4k</span>
+</div>
+<!-- SIM 17 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 17</span>
+<span class="text-on-surface">17.9k</span>
+</div>
+<!-- SIM 18 -->
+<div class="p-1.5 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="text-secondary font-bold">SIM 18</span>
+<span class="text-on-surface">20.0k</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary text-center pt-1">All 18 nodes queried via direct GSM Ping protocol · 0 SIM locks detected</p>
+</div>
+</details>
+<!-- Accordion 4: Thermal 80mm Z-Tape Preview (Authentic POS Tape) -->
+<details class="group bg-surface-container-low rounded-lg overflow-hidden">
+<summary class="flex items-center justify-between p-space-md cursor-pointer select-none bg-surface-container-high/70 hover:bg-surface-container-high transition-colors list-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">receipt</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Preview 80mm Z-Tape</span>
+<span class="font-body-sm text-body-sm text-secondary">معاينة الشريط الضريبي للماكينة</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-DEFAULT">THERMAL DRAFT</span>
+<span class="material-symbols-outlined text-[18px] text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</div>
+</summary>
+<!-- Monospaced Thermal Slip Simulation -->
+<div class="p-space-md bg-surface-container-lowest flex justify-center">
+<div class="w-full max-w-xs bg-white text-surface-container-lowest p-4 rounded-DEFAULT font-label-code text-[11px] leading-tight tracking-tight shadow-md">
+<div class="text-center font-bold tracking-widest pb-2">
+            *** VODAFONE RETAIL ***<br>
+            CAIRO CENTRAL HUB #104<br>
+            END OF SHIFT Z-REPORT<br>
+            --------------------------------
+          </div>
+<div class="flex justify-between">
+<span class="">TERMINAL:</span>
+<span class="">POS-TRM-04</span>
+</div>
+<div class="flex justify-between">
+<span class="">TELLER:</span>
+<span class="">A. MANSOUR (#9021)</span>
+</div>
+<div class="flex justify-between">
+<span class="">SHIFT:</span>
+<span class="">#2 (14:00 - 22:00)</span>
+</div>
+<div class="flex justify-between pb-2">
+<span class="">TIMESTAMP:</span>
+<span class="">24/10/2024 22:00:15</span>
+</div>
+<div class="text-center py-1">--------------------------------</div>
+<div class="flex justify-between font-bold">
+<span class="">TOTAL CASH IN:</span>
+<span class="">+48,200.00 EGP</span>
+</div>
+<div class="flex justify-between font-bold">
+<span class="">TOTAL CASH OUT:</span>
+<span class="">-31,500.00 EGP</span>
+</div>
+<div class="flex justify-between font-bold">
+<span class="">CASH IN DRAWER:</span>
+<span class="">26,700.00 EGP</span>
+</div>
+<div class="flex justify-between text-black pb-2">
+<span class="">PHYSICAL VARIANCE:</span>
+<span class="">0.00 EGP (0%)</span>
+</div>
+<div class="text-center py-1">--------------------------------</div>
+<div class="flex justify-between">
+<span class="">18-WALLET POOL:</span>
+<span class="">360,000.00 EGP</span>
+</div>
+<div class="flex justify-between pb-2">
+<span class="">STORE COMM.:</span>
+<span class="">+1,845.00 EGP</span>
+</div>
+<div class="text-center py-1">--------------------------------</div>
+<div class="text-center py-1 font-bold">
+            [ SUPERVISOR SIGNATURE HOLD ]<br>
+            PENDING DIGITAL APPROVAL
+          </div>
+<!-- Mock Thermal Barcode -->
+<div class="my-3 flex flex-col items-center">
+<div class="flex items-center justify-center gap-0.5 h-8 w-full bg-surface-container-lowest/5 py-1 px-4">
+<span class="w-1 h-full bg-black"></span>
+<span class="w-2 h-full bg-black"></span>
+<span class="w-0.5 h-full bg-black"></span>
+<span class="w-1.5 h-full bg-black"></span>
+<span class="w-0.5 h-full bg-black"></span>
+<span class="w-2 h-full bg-black"></span>
+<span class="w-1 h-full bg-black"></span>
+<span class="w-0.5 h-full bg-black"></span>
+<span class="w-3 h-full bg-black"></span>
+<span class="w-1 h-full bg-black"></span>
+<span class="w-0.5 h-full bg-black"></span>
+<span class="w-2 h-full bg-black"></span>
+<span class="w-1.5 h-full bg-black"></span>
+<span class="w-0.5 h-full bg-black"></span>
+<span class="w-2 h-full bg-black"></span>
+</div>
+<span class="text-[9px] mt-1 tracking-widest text-surface-container-highest">Z-104-04-20241024-9021</span>
+</div>
+</div>
+</div>
+</details>
+</div>
+<!-- Operational Delight / Supervisor Affirmation Banner -->
+<div class="p-3 bg-tertiary-container/15 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">thumb_up</span>
+<span class="font-body-sm text-body-sm text-on-surface">Zero variance detected across all physical &amp; digital counters!</span>
+</div>
+<span class="font-label-code text-label-code text-tertiary font-bold uppercase tracking-wider">CLEAN CLOSE</span>
+</div>
+<!-- Sticky Remote Sign-Off Ergonomics Dock -->
+<div class="fixed bottom-16 inset-x-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl p-space-sm shadow-[0_-4px_24px_rgba(0,0,0,0.7)] flex flex-col gap-2">
+<!-- Quick Operational Dispatch Row -->
+<div class="flex items-center gap-2">
+<!-- WhatsApp Broadcast button to Regional Manager -->
+<button aria-label="Share via WhatsApp" class="flex-1 bg-surface-container hover:bg-surface-container-high text-on-surface min-h-[44px] px-3 rounded-DEFAULT flex items-center justify-center gap-1.5 transition-colors font-body-sm text-body-sm active:scale-[0.98]" id="btnWhatsappShare" type="button">
+<span class="material-symbols-outlined text-tertiary text-[18px]">share</span>
+<span class="">Push to Regional Mgr</span>
+</button>
+<!-- Dispute / Hold shift button -->
+<button aria-label="Dispute shift report" class="flex-1 bg-surface-container hover:bg-surface-container-high text-error min-h-[44px] px-3 rounded-DEFAULT flex items-center justify-center gap-1.5 transition-colors font-body-sm text-body-sm active:scale-[0.98]" id="btnDispute" type="button">
+<span class="material-symbols-outlined text-[18px]">report_problem</span>
+<span class="">Dispute (طلب مراجعة)</span>
+</button>
+</div>
+<!-- Primary Final Sign-Off Action -->
+<button class="w-full bg-primary-container hover:bg-primary-fixed-variant text-white font-headline-sm text-headline-sm font-bold min-h-[50px] rounded-DEFAULT flex items-center justify-center gap-2 shadow-lg shadow-primary-container/25 active:translate-y-0.5 transition-all" id="btnAuthorizeShift" type="button" onclick="(function(){ const m = document.getElementById('authModalOverlay'); if(m){ m.classList.remove('hidden'); } })()">
+<span class="material-symbols-outlined text-[22px]">fingerprint</span>
+<span class="">Authorize &amp; Sign Off Shift (اعتماد وقفل الوردية)</span>
+<span class="font-label-code text-label-code text-white/80 bg-black/20 px-1 py-0.5 rounded-DEFAULT">[PIN/AUTH]</span>
+</button>
+</div>
+</div>
+<script>
+  // Supervisor Quick Micro-interactions & Toast Feedback
+  const authBtn = document.getElementById('btnAuthorizeShift');
+  const disputeBtn = document.getElementById('btnDispute');
+  const waBtn = document.getElementById('btnWhatsappShare');
+
+  if (authBtn) {
+    authBtn.addEventListener('click', () => {
+      authBtn.disabled = true;
+      const originalHtml = authBtn.innerHTML;
+      authBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px] animate-spin">refresh</span>
+        <span>Cryptographically Signing Z-Report...</span>
+      `;
+      authBtn.classList.replace('bg-primary-container', 'bg-tertiary-container');
+      
+      setTimeout(() => {
+        authBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[22px]">verified</span>
+          <span>Shift Approved & Locked (تم الاعتماد بنجاح)</span>
+        `;
+        authBtn.classList.replace('bg-tertiary-container', 'bg-tertiary');
+        authBtn.classList.add('text-on-tertiary');
+      }, 1200);
+    });
+  }
+
+  if (disputeBtn) {
+    disputeBtn.addEventListener('click', () => {
+      const reason = prompt('Please enter inspection note / discrepancy reason (سبب تعليق الاعتماد):', 'Mismatch in physical receipt slips.');
+      if (reason) {
+        alert('Shift #2 flagged for manual recount by Area Auditor. Teller notified on POS terminal.');
+      }
+    });
+  }
+
+  if (waBtn) {
+    waBtn.addEventListener('click', () => {
+      const text = encodeURIComponent('Z-Report Summary [VF Hub #104 / Ahmed Mansour]: Physical Cash: 26,700 EGP (0.00 Variance), 18 Wallets: 360,000 EGP (+16.7k Delta). Verified.');
+      window.open(`https://wa.me/?text=${text}`, '_blank');
+    });
+  }
+</script></main><div id="authModalOverlay" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex flex-col justify-end transition-opacity duration-300 hidden"><div class="bg-surface-container-low border-t border-outline-variant rounded-t-xl p-space-md shadow-[0_-4px_24px_rgba(0,0,0,0.7)] flex flex-col max-w-lg mx-auto w-full max-h-[92vh] overflow-y-auto pb-safe"><div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-DEFAULT bg-primary-container/20 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">draw</span></div><div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Supervisor Sign-Off &amp; Seal</h3><span class="font-body-sm text-body-sm text-secondary">اعتماد الوردية والتوقيع الرقمي للمشرف</span></div></div><button id="closeAuthModal" type="button" aria-label="Close modal" class="w-8 h-8 rounded-DEFAULT bg-surface-container flex items-center justify-center text-secondary hover:text-on-surface transition-colors" onclick="(function(){ const m = document.getElementById('authModalOverlay'); if(m){ m.classList.add('hidden'); } })()"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="mt-space-xs py-1 px-2.5 bg-surface-container rounded-DEFAULT flex items-center justify-between text-secondary font-label-code text-label-code"><span class="text-on-surface font-semibold">Branch #104 · Shift #2</span><span class="text-primary truncate">Ahmed Mansour (#9021)</span><span class="text-tertiary font-bold">26,700 EGP</span></div><div class="mt-space-sm grid grid-cols-2 gap-1.5 p-1 bg-surface-container rounded-DEFAULT"><button id="tabBtnSignature" type="button" class="py-1.5 px-2 text-center rounded-DEFAULT font-label-code text-label-code font-bold transition-all bg-primary-container text-white flex items-center justify-center gap-1.5"><span class="material-symbols-outlined text-[16px]">draw</span><span class="">Digital Signature (توقيع بالقلم)</span></button><button id="tabBtnPinBio" type="button" class="py-1.5 px-2 text-center rounded-DEFAULT font-label-code text-label-code font-bold transition-all text-secondary hover:text-on-surface flex items-center justify-center gap-1.5"><span class="material-symbols-outlined text-[16px]">pin</span><span class="">PIN &amp; Bio (رمز و بصمة)</span></button></div><div id="sectionDigitalSignature" class="flex flex-col mt-space-sm space-y-2"><div class="flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[18px]">gesture</span><span class="font-body-sm text-body-sm text-on-surface font-semibold">Supervisor Pen Signature Canvas</span></div><div id="signatureStatusBadge" class="flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-surface-container font-label-code text-[10px] text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span id="sigStatusText" class="">Awaiting Signature (بانتظار التوقيع)</span></div></div><div class="relative bg-surface-container-lowest rounded-lg border border-surface-container-high overflow-hidden shadow-inner"><canvas id="supervisorSigCanvas" width="440" height="160" class="w-full h-40 cursor-crosshair touch-none block relative z-10"></canvas><div class="absolute inset-0 pointer-events-none flex flex-col justify-between p-3 z-0"><div class="flex justify-between items-center opacity-25 text-secondary font-label-code text-[10px]"><span class="">AUDIT SECURE SIGNATURE SURFACE</span><span class="">VF-Z01-AUTH</span></div><div class="flex flex-col items-center justify-center my-auto opacity-15 select-none"><span class="material-symbols-outlined text-[48px] text-secondary">stylus</span><span class="font-label-code text-[11px] tracking-wider text-secondary">Sign inside box using stylus or finger · وقع هنا</span></div><div class="flex items-center justify-between border-t border-dashed border-outline-variant/60 pt-1"><div class="flex items-center gap-1 text-primary/70 font-label-code text-[10px]"><span class="material-symbols-outlined text-[12px]">edit</span><span class="">SIGNATURE BASELINE / خط التوقيع</span></div><span class="text-[9px] font-label-code text-secondary/50">SHA256: 8f4c...3e1a</span></div></div></div><div class="flex items-center justify-between gap-2 pt-0.5"><div class="flex items-center gap-1.5"><button id="btnPenThin" type="button" title="Fine Tip" class="px-2 py-1 bg-primary-container text-white rounded-DEFAULT font-label-code text-[11px] font-bold border border-primary/30 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-white"></span><span class="">Fine</span></button><button id="btnPenThick" type="button" title="Bold Tip" class="px-2 py-1 bg-surface-container hover:bg-surface-container-high text-secondary rounded-DEFAULT font-label-code text-[11px] font-bold border border-surface-container-high flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span><span class="">Bold</span></button><button id="btnPenColorBlue" type="button" title="Navy Blue" class="w-6 h-6 rounded-full bg-[#3b82f6] border border-white/20 ml-1"></button><button id="btnPenColorWhite" type="button" title="Crisp White" class="w-6 h-6 rounded-full bg-white border border-primary ml-0.5 ring-1 ring-primary"></button></div><button id="btnClearSignature" type="button" class="px-2.5 py-1 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-error font-label-code text-[11px] font-semibold flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-[14px]">delete_sweep</span><span class="">Clear (مسح التوقيع)</span></button></div><div class="p-2.5 bg-surface-container rounded-DEFAULT flex items-center justify-between text-secondary font-label-code text-[11px]"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-tertiary-container/30 text-tertiary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px]">verified</span></div><div><span class="text-on-surface font-semibold block">Mohamed Tarek (Supervisor L3)</span><span class="text-secondary text-[10px]">ID: #SUP-4019 · Active Keyring Certified</span></div></div><div class="text-right"><span class="text-tertiary font-bold block">SHA-256 DIGITAL SEAL</span><span class="text-secondary-fixed text-[10px]" id="liveSignStamp">24/10 22:00:15</span></div></div></div><div id="sectionPinBiometrics" class="flex flex-col items-center space-y-2 hidden mt-space-sm"><div class="relative flex items-center justify-center my-2"><div class="w-16 h-16 rounded-full bg-primary-container/15 flex items-center justify-center animate-pulse"></div><div class="absolute w-12 h-12 rounded-full bg-primary-container/25 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[28px]">fingerprint</span></div></div><div class="flex items-center gap-3" id="pinDotsContainer"><span class="w-3 h-3 rounded-full bg-surface-container-highest border border-outline-variant" data-pin-dot="0"></span><span class="w-3 h-3 rounded-full bg-surface-container-highest border border-outline-variant" data-pin-dot="1"></span><span class="w-3 h-3 rounded-full bg-surface-container-highest border border-outline-variant" data-pin-dot="2"></span><span class="w-3 h-3 rounded-full bg-surface-container-highest border border-outline-variant" data-pin-dot="3"></span></div><span class="font-label-code text-[11px] text-secondary">Quick Enter 4-Digit Supervisor PIN (كود المشرف)</span><div class="grid grid-cols-3 gap-2 w-full max-w-xs mt-1 font-label-numeric text-[16px]"><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-center font-bold active:scale-[0.96] transition-all" data-key="1">1</button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-center font-bold active:scale-[0.96] transition-all" data-key="2">2</button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-center font-bold active:scale-[0.96] transition-all" data-key="3">3</button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-center font-bold active:scale-[0.96] transition-all" data-key="4">4</button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-center font-bold active:scale-[0.96] transition-all" data-key="5">5</button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-center font-bold active:scale-[0.96] transition-all" data-key="6">6</button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-center font-bold active:scale-[0.96] transition-all" data-key="7">7</button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-center font-bold active:scale-[0.96] transition-all" data-key="8">8</button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-center font-bold active:scale-[0.96] transition-all" data-key="9">9</button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-error text-center font-bold active:scale-[0.96] transition-all" data-key="clear"><span class="material-symbols-outlined text-[16px]">backspace</span></button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-center font-bold active:scale-[0.96] transition-all" data-key="0">0</button><button type="button" class="pin-key py-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-tertiary flex items-center justify-center active:scale-[0.96] transition-all" data-key="bio"><span class="material-symbols-outlined text-[18px]">verified_user</span></button></div></div><div class="mt-space-md flex flex-col gap-2"><button id="btnFinalSealZReport" type="button" class="w-full bg-primary-container hover:bg-primary-fixed-variant text-white font-headline-sm text-headline-sm font-bold min-h-[48px] rounded-DEFAULT flex items-center justify-center gap-2 shadow-lg shadow-primary-container/25 active:scale-[0.98] transition-all"><span class="material-symbols-outlined text-[20px]">verified</span><span id="btnSealText" class="">Confirm &amp; Seal Z-Report (تأكيد وقفل الوردية النهائي)</span></button><button id="btnCancelAuthModal" type="button" class="w-full bg-surface-container hover:bg-surface-container-high text-secondary min-h-[42px] rounded-DEFAULT flex items-center justify-center font-body-sm text-body-sm transition-colors" onclick="(function(){ const m = document.getElementById('authModalOverlay'); if(m){ m.classList.add('hidden'); } })()">Cancel / إلغاء ورجوع</button></div></div></div><script id="sigCanvasLogic">(function(){ function initSigPad(){ const canvas = document.getElementById('supervisorSigCanvas'); if(!canvas) return; const ctx = canvas.getContext('2d'); let isDrawing = false; let hasSigned = false; let penColor = '#ffffff'; let penWidth = 2.5; function resizeCanvas(){ const rect = canvas.getBoundingClientRect(); if(rect.width && rect.height){ canvas.width = rect.width * (window.devicePixelRatio || 1); canvas.height = rect.height * (window.devicePixelRatio || 1); ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1); ctx.lineCap = 'round'; ctx.lineJoin = 'round'; } } resizeCanvas(); window.addEventListener('resize', resizeCanvas); function getPos(e){ const rect = canvas.getBoundingClientRect(); const clientX = e.touches ? e.touches[0].clientX : e.clientX; const clientY = e.touches ? e.touches[0].clientY : e.clientY; return { x: clientX - rect.left, y: clientY - rect.top }; } function startDraw(e){ isDrawing = true; const p = getPos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); if(e.cancelable && e.type.startsWith('touch')) e.preventDefault(); } function draw(e){ if(!isDrawing) return; const p = getPos(e); ctx.strokeStyle = penColor; ctx.lineWidth = penWidth; ctx.lineTo(p.x, p.y); ctx.stroke(); if(!hasSigned){ hasSigned = true; markSigned(); } if(e.cancelable && e.type.startsWith('touch')) e.preventDefault(); } function stopDraw(){ isDrawing = false; } canvas.addEventListener('mousedown', startDraw); canvas.addEventListener('mousemove', draw); canvas.addEventListener('mouseup', stopDraw); canvas.addEventListener('mouseleave', stopDraw); canvas.addEventListener('touchstart', startDraw, { passive: false }); canvas.addEventListener('touchmove', draw, { passive: false }); canvas.addEventListener('touchend', stopDraw); function markSigned(){ const badge = document.getElementById('signatureStatusBadge'); const txt = document.getElementById('sigStatusText'); const sealBtn = document.getElementById('btnFinalSealZReport'); if(badge && txt){ badge.className = 'flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-tertiary-container/30 font-label-code text-[10px] text-tertiary font-bold'; txt.innerText = 'Signed & Verified (تم التوقيع بنجاح)'; badge.firstElementChild.className = 'w-1.5 h-1.5 rounded-full bg-tertiary'; } if(sealBtn){ sealBtn.classList.replace('bg-primary-container', 'bg-tertiary-container'); sealBtn.classList.add('ring-1', 'ring-tertiary'); } } const btnClear = document.getElementById('btnClearSignature'); if(btnClear){ btnClear.addEventListener('click', function(){ ctx.clearRect(0, 0, canvas.width, canvas.height); hasSigned = false; const badge = document.getElementById('signatureStatusBadge'); const txt = document.getElementById('sigStatusText'); const sealBtn = document.getElementById('btnFinalSealZReport'); if(badge && txt){ badge.className = 'flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-surface-container font-label-code text-[10px] text-secondary'; txt.innerText = 'Awaiting Signature (بانتظار التوقيع)'; badge.firstElementChild.className = 'w-1.5 h-1.5 rounded-full bg-secondary'; } if(sealBtn){ sealBtn.classList.replace('bg-tertiary-container', 'bg-primary-container'); sealBtn.classList.remove('ring-1', 'ring-tertiary'); } }); } const btnThin = document.getElementById('btnPenThin'); const btnThick = document.getElementById('btnPenThick'); if(btnThin && btnThick){ btnThin.addEventListener('click', function(){ penWidth = 2; btnThin.className = 'px-2 py-1 bg-primary-container text-white rounded-DEFAULT font-label-code text-[11px] font-bold border border-primary/30 flex items-center gap-1'; btnThick.className = 'px-2 py-1 bg-surface-container hover:bg-surface-container-high text-secondary rounded-DEFAULT font-label-code text-[11px] font-bold border border-surface-container-high flex items-center gap-1'; }); btnThick.addEventListener('click', function(){ penWidth = 4; btnThick.className = 'px-2 py-1 bg-primary-container text-white rounded-DEFAULT font-label-code text-[11px] font-bold border border-primary/30 flex items-center gap-1'; btnThin.className = 'px-2 py-1 bg-surface-container hover:bg-surface-container-high text-secondary rounded-DEFAULT font-label-code text-[11px] font-bold border border-surface-container-high flex items-center gap-1'; }); } const colBlue = document.getElementById('btnPenColorBlue'); const colWhite = document.getElementById('btnPenColorWhite'); if(colBlue && colWhite){ colBlue.addEventListener('click', function(){ penColor = '#60a5fa'; colBlue.className = 'w-6 h-6 rounded-full bg-[#3b82f6] border border-primary ring-1 ring-primary ml-1'; colWhite.className = 'w-6 h-6 rounded-full bg-white border border-transparent ml-0.5'; }); colWhite.addEventListener('click', function(){ penColor = '#ffffff'; colWhite.className = 'w-6 h-6 rounded-full bg-white border border-primary ml-0.5 ring-1 ring-primary'; colBlue.className = 'w-6 h-6 rounded-full bg-[#3b82f6] border border-white/20 ml-1'; }); } const tabSig = document.getElementById('tabBtnSignature'); const tabPin = document.getElementById('tabBtnPinBio'); const secSig = document.getElementById('sectionDigitalSignature'); const secPin = document.getElementById('sectionPinBiometrics'); if(tabSig && tabPin && secSig && secPin){ tabSig.addEventListener('click', function(){ tabSig.className = 'py-1.5 px-2 text-center rounded-DEFAULT font-label-code text-label-code font-bold transition-all bg-primary-container text-white flex items-center justify-center gap-1.5'; tabPin.className = 'py-1.5 px-2 text-center rounded-DEFAULT font-label-code text-label-code font-bold transition-all text-secondary hover:text-on-surface flex items-center justify-center gap-1.5'; secSig.classList.remove('hidden'); secPin.classList.add('hidden'); setTimeout(resizeCanvas, 50); }); tabPin.addEventListener('click', function(){ tabPin.className = 'py-1.5 px-2 text-center rounded-DEFAULT font-label-code text-label-code font-bold transition-all bg-primary-container text-white flex items-center justify-center gap-1.5'; tabSig.className = 'py-1.5 px-2 text-center rounded-DEFAULT font-label-code text-label-code font-bold transition-all text-secondary hover:text-on-surface flex items-center justify-center gap-1.5'; secPin.classList.remove('hidden'); secSig.classList.add('hidden'); }); } const sealBtn = document.getElementById('btnFinalSealZReport'); if(sealBtn){ sealBtn.addEventListener('click', function(){ sealBtn.disabled = true; sealBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Sealing SHA-256 Signature...</span>'; setTimeout(function(){ const m = document.getElementById('authModalOverlay'); if(m) m.classList.add('hidden'); const authShift = document.getElementById('btnAuthorizeShift'); if(authShift){ authShift.className = 'w-full bg-tertiary text-on-tertiary font-headline-sm text-headline-sm font-bold min-h-[50px] rounded-DEFAULT flex items-center justify-center gap-2 shadow-lg transition-all'; authShift.innerHTML = '<span class="material-symbols-outlined text-[22px]">verified</span><span>Shift Signed &amp; Sealed (تم التوقيع واعتماد الوردية)</span>'; authShift.disabled = true; } }, 900); }); } } if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', initSigPad); } else { initSigPad(); } })();</script><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.6)]" data-active-classes="text-primary-fixed bg-surface-container-high"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] w-full py-1 rounded-DEFAULT transition-all gap-0.5 text-primary-fixed bg-surface-container-high" data-path="audit-feed" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-sm text-body-sm tracking-tight text-center truncate max-w-[72px]">Audit Feed</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] w-full py-1 rounded-DEFAULT text-secondary hover:text-on-surface transition-all gap-0.5" data-path="18-wallets" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-body-sm text-body-sm tracking-tight text-center truncate max-w-[72px]">18 Wallets</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] w-full py-1 rounded-DEFAULT text-secondary hover:text-on-surface transition-all gap-0.5 relative" data-path="alerts" href="#"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="font-body-sm text-body-sm tracking-tight text-center truncate max-w-[72px]">Alerts</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] w-full py-1 rounded-DEFAULT text-secondary hover:text-on-surface transition-all gap-0.5" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-sm text-body-sm tracking-tight text-center truncate max-w-[72px]">Settings</span></a></div></nav>
+
+</body></html>
